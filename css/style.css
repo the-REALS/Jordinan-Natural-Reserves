@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,1.0);
+}
+
+/* Caption text */
+.text {
+  color: balck;
+  font-size: 20px;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+top:500px; 
+  /* bottom: 8px; */
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next {font-size: 11px}
+}
+
+#more {display: none;}
+#more1 {display: none;}
+#more2 {display: none;}
+
+
+#par1 {
+  font-family: 'Poppins', sans-serif;
+  line-height: 25px;
+  width: 75%;
+  min-height: 69vh;
+  margin: auto auto;
+  padding-top: 90px;
+}
+
+
+#myBtn{
+  border-radius: 30px;
+  width:90px;
+  height: 30px;
+  display: inline-block;
+background-color: cornflowerblue;
+}
+
+#myBtn1{
+  border-radius: 30px;
+  width:90px;
+  height: 30px;
+  display: inline-block;
+background-color: cornflowerblue;
+
+}
+
+#myBtn2{
+  border-radius: 30px;
+  width:90px;
+  height: 30px;
+  display: inline-block;
+background-color: cornflowerblue;
+
+}
+
+  #myBtn:hover{
+  background-color:blueviolet ;
+   }
+ #myBtn1:hover{
+  background-color: blueviolet;
+   }
+                
+ #myBtn2:hover{
+ background-color: blueviolet;
+    }
+                    
