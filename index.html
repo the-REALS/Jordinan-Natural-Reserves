@@ -6,112 +6,165 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Jordinan-Natural-Reserves</title>
+    <script src="https://kit.fontawesome.com/4041ed350e.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <header>
+        <div id="background">
+            <div class="topnav">
+                <img src="img/logo.PNG" alt="logo" id="logo">
+                <div id="myLinks">
+                    <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+                    <a href="cart.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
+                    <a href="store.html"><i class="fas fa-store"></i> STORE</a>
+                    <a href="contact-us.html"><i class="fas fa-shopping-cart"></i> CART</a>
+                </div>
+                <input type="submit" id="icon" value="" title="Go to the top">
+            </div>
+        </div>
+    </header>
 
-    <div class="slideshow-container">
+    <main>
 
-        <div class="mySlides fade">
-            <img src="img/azraq.jpg" style="width:100%">
-            <div class="text">AZRAQ WETLAND RESERVE</div>
+        <div id="slideshowContainer">
+            <h1 id="firstH1">OUR RESERVES IN JORDAN</h1>
+
+            <div class="mySlides fade">
+                <img src="img/azraq.jpg" style="width:100%">
+                <div class="text">AZRAQ WETLAND RESERVE</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/dana.jpg" style="width:100%">
+                <div class="text">DANA BIOSPHERE RESERVE</div>
+            </div>
+
+            <div class="mySlides fade">
+                <img src="img/moujeb.jpg" style="width:100%">
+                <div class="text">MUJIB BIOSPHERE RESERVE</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+        </div>
+        <br>
+
+        <div id="slidesDots" style="text-align:center">
+            <span id="1" class="dot"></span>
+            <span id="2" class="dot"></span>
+            <span id="3" class="dot"></span>
         </div>
 
-        <div class="mySlides fade">
-            <img src="img/dana.jpg" style="width:100%">
-            <div class="text">DANA BIOSPHERE RESERVE</div>
-        </div>
-
-        <div class="mySlides fade">
-            <img src="img/moujeb.jpg" style="width:100%">
-            <div class="text">MUJIB BIOSPHERE RESERVE</div>
-        </div>
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-    </div>
-    <br>
-
-    <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-    </div>
-
-    <div id="par1">
-        <p class="paragraph">
-            Azraq is a unique wetland, located in the heart of the arid Eastern Desert, which takes its name from the
-            Arabic word for ‘blue’. A migratory stopover for birds from three continents, Azraq is becoming increasingly
-            popular for bird watching. From the walkways and hides, visitors get the chance to observe birds close at
-            hand,
-            including local, migratory and occasional rare species. The Azraq area also has a rich cultural history due
-            to its strategic <span id="doot">... </span><span id="more">location and water resources. It was
-
-                used as a station for pilgrims and camel trains and Lawrence of Arabia was stationed in Azraq Castle
-                during
+        <div id="par1">
+            <p class="paragraph">
+                Azraq is a unique wetland, located in the heart of the arid Eastern Desert, which takes its name from
                 the
-                Arab Revolt. The local people are also unusually diverse, coming from three different ethnic origins,
-                Bedouin,
-                Chechen and Druze; each of which has distinctive beliefs and traditions. Bedouins have lived a nomadic
-                life
-                style in the area for generations, whereas the Chechens are descendants of settlers from the Caucasus
+                Arabic word for ‘blue’. A migratory stopover for birds from three continents, Azraq is becoming
+                increasingly
+                popular for bird watching. From the walkways and hides, visitors get the chance to observe birds close
+                at
+                hand,
+                including local, migratory and occasional rare species. The Azraq area also has a rich cultural history
+                due
+                to its strategic <span id="doot">... </span><span id="more">location and water resources. It was
+
+                    used as a station for pilgrims and camel trains and Lawrence of Arabia was stationed in Azraq Castle
+                    during
+                    the
+                    Arab Revolt. The local people are also unusually diverse, coming from three different ethnic
+                    origins,
+                    Bedouin,
+                    Chechen and Druze; each of which has distinctive beliefs and traditions. Bedouins have lived a
+                    nomadic
+                    life
+                    style in the area for generations, whereas the Chechens are descendants of settlers from the
+                    Caucasus
+                    and
+                    the Druze stem from Arab tribes in Syria and Lebanon Many
+                    interesting archaeological sites lie within easy reach of Azraq Lodge, including the famous but
+                    misnamed‘desert castles’: Qasr Amra, Qasr Kharana and Azraq Castle. Qasr Amra is one of the
+                    best-preserved Umayyad
+                    bathhouses in the world and a World Heritage Site. Its interior walls are covered in lively frescos
+                    dating
+                    back to 700 AD. There are also many dramatic desert landscapes to discover, including moon-like
+                    plains
+                    of black
+                    basalt and white valleys of chalk.
+                </span>
+                <button onclick="readmeButton()" id="myBtn">Read more</button>
+            </p>
+
+            <p class="paragraph">
+                Dana is Jordan’s largest nature reserve, covering some 320 square kilometers of spectacular mountains
                 and
-                the Druze stem from Arab tribes in Syria and Lebanon Many
-                interesting archaeological sites lie within easy reach of Azraq Lodge, including the famous but
-                misnamed‘desert castles’: Qasr Amra, Qasr Kharana and Azraq Castle. Qasr Amra is one of the
-                best-preserved Umayyad
-                bathhouses in the world and a World Heritage Site. Its interior walls are covered in lively frescos
-                dating
-                back to 700 AD. There are also many dramatic desert landscapes to discover, including moon-like plains
-                of black
-                basalt and white valleys of chalk.
-            </span>
-            <button onclick="readmeButton()" id="myBtn">Read more</button>
-        </p>
-
-        <p class="paragraph">
-            Dana is Jordan’s largest nature reserve, covering some 320 square kilometers of spectacular mountains and
-            Wadis along the face of the Great Rift Valley. From scorching sand dunes in the west to cool mountaintops in
-            the east, the Dana Biosphere Reserve is home to a great variety of wildlife. There are plants and animals
-            characteristic of true desert, of Mediterranean forests and of the dry plains of Russia. In fact, Dana is
-            really a melting pot <span id="doot1">...</span><span id="more1">of species from three continents: Europe,
-                Africa and Asia. Such a combination of
+                Wadis along the face of the Great Rift Valley. From scorching sand dunes in the west to cool
+                mountaintops in
+                the east, the Dana Biosphere Reserve is home to a great variety of wildlife. There are plants and
+                animals
+                characteristic of true desert, of Mediterranean forests and of the dry plains of Russia. In fact, Dana
+                is
+                really a melting pot <span id="doot1">...</span><span id="more1">of species from three continents:
+                    Europe,
+                    Africa and Asia. Such a combination of
 
 
-                natural communities in a single area is unique in Jordan and many of Dana’s animals and plants are very
-                rare. So far, a total of 700 plant species, 190 bird species, 37 mammal species and 36 reptile species
-                have
-                been recorded in the Reserve, of which 25 are known to be endangered, including the Sand Cat, the Syrian
-                Wolf, the Lesser Kestrel and the Spiny Tailed Lizard. Without special care, some of these could
-                disappear
-                from Earth forever, which makes the Dana Biosphere Reserve a place of global importance.overlooking  Without special
-            </span>
-            <button onclick="readmeButton()" id="myBtn1">Read more</button>
-        </p>
+                    natural communities in a single area is unique in Jordan and many of Dana’s animals and plants are
+                    very
+                    rare. So far, a total of 700 plant species, 190 bird species, 37 mammal species and 36 reptile
+                    species
+                    have
+                    been recorded in the Reserve, of which 25 are known to be endangered, including the Sand Cat, the
+                    Syrian
+                    Wolf, the Lesser Kestrel and the Spiny Tailed Lizard. Without special care, some of these could
+                    disappear
+                    from Earth forever, which makes the Dana Biosphere Reserve a place of global importance.overlooking
+                    Without special
+                </span>
+                <button onclick="readmeButton()" id="myBtn1">Read more</button>
+            </p>
 
-        <p class="paragraph">
-            At 410 meters below sea level, the Mujib Biosphere Reserve is the lowest nature reserve on Earth. Its rugged
-            and spectacular mountains border the Dead Sea coast and are dissected by several river-filled canyons that
-            offer the best river and adventure hikes in Jordan. The breathtaking scenery and the challenge of
-            negotiating Mujib’s fast-flowing rivers make the Reserve one of Jordan’s most popular natural attractions.
-
-
-            Mujib’s complex river system and <span id="doot2">...</span><span id="more2">all-year water flow enable it
-                to support a rich biodiversity. To date,
-                over
-                300 species of plants, 10 species of carnivores and numerous species of resident and migratory birds
-                have
-                been recorded. Some of the mountain and valley areas are difficult to reach and offer safe havens for
-                rare
-                species of cats, mountain goats (Ibex) and other mountain animals. Adventure Center
+            <p class="paragraph">
+                At 410 meters below sea level, the Mujib Biosphere Reserve is the lowest nature reserve on Earth. Its
+                rugged
+                and spectacular mountains border the Dead Sea coast and are dissected by several river-filled canyons
+                that
+                offer the best river and adventure hikes in Jordan. The breathtaking scenery and the challenge of
+                negotiating Mujib’s fast-flowing rivers make the Reserve one of Jordan’s most popular natural
+                attractions.
 
 
-            </span>
-            <button onclick="readmeButton()" id="myBtn2">Read more</button>
-        </p>
+                Mujib’s complex river system and <span id="doot2">...</span><span id="more2">all-year water flow enable
+                    it
+                    to support a rich biodiversity. To date,
+                    over
+                    300 species of plants, 10 species of carnivores and numerous species of resident and migratory birds
+                    have
+                    been recorded. Some of the mountain and valley areas are difficult to reach and offer safe havens
+                    for
+                    rare
+                    species of cats, mountain goats (Ibex) and other mountain animals. Adventure Center
 
-    </div>
+
+                </span>
+                <button onclick="readmeButton()" id="myBtn2">Read more</button>
+            </p>
+
+
+            <video class="vid" width="500" height="350" controls autoplay>
+                <source src="img/ducks.mp4" type="video/mp4">
+                
+            </video>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+
+    </footer>
 
     <script src="js/app.js"></script>
     <script src="js/index.js"></script>

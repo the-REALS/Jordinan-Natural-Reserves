@@ -5,12 +5,92 @@
   margin: 0;
 }
 
+/* for nav bar */
+.background {
+  margin: auto;
+  background-color:#292c2f;
+  height: 500px;
+  color: white;
+  border-radius: 10px;
+ 
+}
+.topnav {
+  overflow: hidden;
+  background-color:#292c2f;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+#icon{
+  height: 32px;
+    background-position-y: center;
+    width: 39px;
+    background-image: url(../img/menu.png);
+    background-color: #292C2F;
+    background-repeat-x: no-repeat;
+    background-repeat-y: no-repeat;
+    background-origin: content-box;
+    background-position-x: center;
+    margin-right:2%;
+    margin-top: 7px;
+    position: absolute;
+    right:8% ;
+    right: 1%;
+    top: 8%;
+}
+.topnav #myLinks {
+  display: none;
+  float: right;
+  position: absolute;
+  right: 6%;
+  top: 30%;
+}
+.topnav a {
+  color: white;
+  padding: 21px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a#icon {
+  float: right;
+}
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.active {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#logo{
+  border-radius: 50px;
+  width: 50px;
+  margin: 5px 5px 5px 50px;
+
+}
+#background {
+  background-position-y: center;
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  background-image: url(../img/backgraound.jpg);
+}
+
+/* --------------------------- */
 
 /* Slideshow container */
-.slideshow-container {
+#firstH1 {
+  font-weight: 30px;
+  font-size: 35px;
+  padding-bottom:15px ;
+  text-align: center;
+}
+#slideshowContainer {
   max-width: 1000px;
   position: relative;
   margin: auto;
+  margin-top: 150px;
 }
 
 /* Next & previous buttons */
@@ -47,8 +127,8 @@
   position: absolute;
   width: 100%;
   text-align: center;
-top:500px; 
-  /* bottom: 8px; */
+  top:530px; 
+  
 }
 
 /* The dots/bullets/indicators */
@@ -142,3 +222,7 @@ background-color: cornflowerblue;
  background-color: blueviolet;
     }
                     
+ .vid{
+   position: relative;
+   
+    }
