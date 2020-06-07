@@ -109,36 +109,36 @@ top:500px;
   border-radius: 30px;
   width:90px;
   height: 30px;
-  display: block;
-  float: right;
-  margin-right: 290px;
+  display: inline-block;
+background-color: cornflowerblue;
 }
-#myBtn:hover{
-background-color: aqua;
-}
-#myBtn1:hover{
-  background-color: aqua;
-  }
-
-  #myBtn2:hover{
-    background-color: aqua;
-    }
-    
 
 #myBtn1{
   border-radius: 30px;
   width:90px;
   height: 30px;
-  display: block;
-  float: right;
-  margin-right: 290px;
+  display: inline-block;
+background-color: cornflowerblue;
+
 }
 
 #myBtn2{
   border-radius: 30px;
   width:90px;
   height: 30px;
-  display: block;
-  float: right;
-  margin-right: 290px;
+  display: inline-block;
+background-color: cornflowerblue;
+
 }
+
+  #myBtn:hover{
+  background-color:blueviolet ;
+   }
+ #myBtn1:hover{
+  background-color: blueviolet;
+   }
+                
+ #myBtn2:hover{
+ background-color: blueviolet;
+    }
+                    
