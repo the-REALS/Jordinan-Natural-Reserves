@@ -9,7 +9,6 @@ function getProduct(){
     console.log(products);
     }
   }
-
 function renderCart(){
     getProduct();
     for( var i=0; i< products.length; i++){
@@ -35,5 +34,4 @@ function renderCart(){
         tRow.appendChild(tData5);
     }
 }
-
 renderCart();
