@@ -22,14 +22,20 @@
     position: relative;
     margin-top: 20px;
 }
+.container .card h2{
+    float: right;
+    margin-top: 5px;
+    padding-right: 10px;
+}
 .container .card{
     position: relative;
-    width: 220px;
-    height: 350px;
+    width: 300px;
+    height: 400px;
     background: #232323;
     border-radius: 20px;
     overflow: hidden;
     margin: 30px;
+    color: #f5f5f5;
 }
 .container .card::before{
     content: '';
@@ -84,10 +90,11 @@
 }
 .container .card .imgBx img{
     position: absolute;
-    top: 75%;
-    left: 50%;
-    transform: translate(-50%, -50%) rotate(-25deg);
-    width: 270px;
+    /* top: 75%; */
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%) rotate(-25deg); */
+    width: 250px;
+   
 }
 .container .card .contentBx {
     position: absolute;
@@ -115,6 +122,7 @@
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
+    margin-top: 80px;
 }
 .container .card:hover .contentBx .size{
     opacity: 1;
@@ -130,18 +138,18 @@
     margin-right: 10px;
 }
 .container .card .contentBx .size span{
-    width: 26px;
-    height: 26px;
+    width: 45px;
+    height: 25px;
     text-align: center;
     line-height: 26px;
-    font-size: 14px;
+    font-size: 20px;
     display: inline-block;
     color: #111;
     background: #fff;
     margin: 0 5px;
     transition: 0.5s;
     color: #111;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
 }
 .container .card .contentBx .size span:hover{
@@ -160,7 +168,26 @@
     transform: translate(50px);
     transition: 0.5s;
 }
+.container .card .contentBx input{
+    /* display: inline-block; */
+    /* padding: 10px 20px; */
+    background: #fff;
+    border-radius: 4px;
+    /* margin-top: 10px; */
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    opacity: 0;
+    transform: translate(50px);
+    transition: 0.5s;
+    width: 70px;
+}
 .container .card:hover .contentBx a{
+    opacity: 1;
+    transform: translate(0px);
+    transition-delay: 0.75s;
+}
+.container .card:hover .contentBx input{
     opacity: 1;
     transform: translate(0px);
     transition-delay: 0.75s;
