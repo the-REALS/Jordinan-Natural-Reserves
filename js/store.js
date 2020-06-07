@@ -18,21 +18,22 @@ var addToCart = document.getElementsByClassName('container');
 addEventListener('click',handelAddToCart);
 
 function handelAddToCart (event){
+    event.preventDefault();
     getProduct();
     if(event.target.textContent == 'Add To Cart'){
     // Reach the path of the product image
     var productPath = event.path[2].children[0].children[0].attributes[0].nodeValue;
     console.log(productPath);
     // Reach the name of the product
-    var poductName = event.path[2].children[0].children[1].textContent;
-     console.log(poductName);
+    var productName = event.path[2].children[0].children[1].textContent;
+     console.log(productName);
      console.log(event.path[2].children[0].children[0].attributes[1].nodeValue);
      // Reach the price of the product
     var productPrice = event.path[2].children[0].children[0].attributes[1].nodeValue; 
     //Reach the quantity
     var productQuantity = event.path[1].children[1].value;
     //creat p
-    new Products(poductName, productPath, productPrice, productQuantity);
+    new Products(productName, productPath, productPrice, productQuantity);
 
     // console.log(products);
     setProduct();
@@ -43,7 +44,7 @@ function setProduct(){
     var item = JSON.stringify(products);
     localStorage.setItem('item', item);
 }
-
+// get the item that stored in the local storage 
 function getProduct(){
   var getproduct = localStorage.getItem('item');
   if(getproduct){
