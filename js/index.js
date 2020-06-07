@@ -11,7 +11,7 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
-        
+        // to show 3 the slides 
         function showSlides(n) {
           var i;
           var slides = document.getElementsByClassName("mySlides");
@@ -40,10 +40,20 @@ function currentSlide(n) {
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
         }
-        setInterval(function(){plusSlides(1); }, 5000);
-        
 
+        
+        var setIntervalx = setInterval(function(){plusSlides(1); }, 5000);
+
+        // function to show the other content of the text (READ MORE)
         function readmeButton() {
+          if(event.target.textContent == 'Read more'){
+            clearInterval(setIntervalx);
+          }else {
+            clearInterval(setIntervalx);
+            setIntervalx = setInterval(function(){plusSlides(1); }, 5000);
+          }
+
+
           var dots = document.getElementById("doot");
           var dots1 = document.getElementById("doot1");
           var dots2 = document.getElementById("doot2");
@@ -56,7 +66,6 @@ function currentSlide(n) {
           var btnText1 = document.getElementById("myBtn1");
           var btnText2 = document.getElementById("myBtn2");
 
-        
           if (dots.style.display === "none") {
             dots.style.display = "inline";
             btnText.innerHTML = "Read more"; 
@@ -88,3 +97,10 @@ function currentSlide(n) {
 
           }
         }
+
+
+     
+    
+
+        
+     
