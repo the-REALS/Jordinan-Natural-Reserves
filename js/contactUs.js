@@ -27,6 +27,7 @@ function checkDon(){
     var b4 = document.forms["don"]["4"].value;
     
     if (b3 != "" ){
-        alert (b3+ " " +b4);     
+        alert (b3+ " " +b4);    
+         
     } 
 }
