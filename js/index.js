@@ -11,6 +11,15 @@ function currentSlide(n) {
   showSlides(slideIndex = n);
 }
 
+
+ var slidesDots = document.querySelector('#slidesDots');
+ slidesDots.addEventListener('click',function(event){
+   if(event.target.attributes[1].textContent == 'dot'){
+     console.log(event.target.attributes[1].textContent);
+     var first = event.target.id;
+     currentSlide(first);
+   }
+} );
         // to show 3 the slides 
         function showSlides(n) {
           var i;
@@ -24,7 +33,6 @@ function currentSlide(n) {
           if (n > slidesParagraph.length) {slideIndex = 1}
           if (n < 1) {slideIndex = slidesParagraph.length}
 
-
           for (i = 0; i < slides.length; i++) {
               slides[i].style.display = "none";
           }
@@ -33,10 +41,9 @@ function currentSlide(n) {
           }
           for (i=0; i < slidesParagraph.length;i++){
             slidesParagraph[i].style.display = "none";
-
           }
-          slidesParagraph[slideIndex-1].style.display = "block";  
 
+          slidesParagraph[slideIndex-1].style.display = "block";  
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
         }
@@ -52,7 +59,6 @@ function currentSlide(n) {
             clearInterval(setIntervalx);
             setIntervalx = setInterval(function(){plusSlides(1); }, 5000);
           }
-
 
           var dots = document.getElementById("doot");
           var dots1 = document.getElementById("doot1");
@@ -102,10 +108,32 @@ function currentSlide(n) {
           
           }
         }
+   
+        // for the navbar button
+            var links=document.getElementById("icon");
+        links.addEventListener('click',function(event){
+            event.preventDefault();
+            var displayOrHide=document.getElementById("myLinks")
+            if (displayOrHide.style.display === "inline-block") {
+                displayOrHide.style.display = "none";
+            } else {
+                displayOrHide.style.display = "inline-block";
+            }
+        });
+  var nav = document.querySelector('.topnav');   
+  window.onscroll = function() {scrollFunction()};
 
-
-     
-    
-
-        
-     
+  function scrollFunction() {
+    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+      nav.classList = "sticky";
+      console.log('hiii')
+    } else {
+      nav.classList = "topnav";
+    }
+  }
+  
+  var men = document.querySelector('.menu');
+        men.addEventListener('click', () =>{
+            men.classList.toggle('active');
+            console.log('ssss');
+        })

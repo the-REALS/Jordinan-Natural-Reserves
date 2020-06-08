@@ -5,12 +5,26 @@
     padding: 0;
     font-family: 'poppins', sans-serif;
 }
-/* body{
+
+.stor-header {
+    background-color: #9bdc28;
+    text-align: center;
+    margin: 50px 0 35px 0;
+}
+
+.filter-buttons {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    min-height: 100vh;
-} */
+}
+li{
+    display: inline;
+    padding: 20px;
+    font-family: 'poppins', sans-serif;
+    font-weight: 900;
+    cursor: pointer;
+}
+
 .flex-container {
     display: flex;
     justify-content: space-around;
@@ -51,7 +65,7 @@
 .container .card:hover:before{
     clip-path: circle(300px at 80% -20%);
 }
-.container .card::after{
+/* .container .card::after{
     content: '';
     position: absolute;
     top: 0;
@@ -61,16 +75,16 @@
     background: #9bdc28;
     clip-path: circle(150px at 80% 20%);
     transition: 0.5s ease-in-out;
-}
+} */
 .container .card:hover:before{
     clip-path: circle(300px at 80% -20%);
 }
 .container .card::after{
-    content: 'Tree';
+    content: 'THE REALS';
     position: absolute;
-    top: 30%;
-    left: -20%;
-    font-size: 12em;
+    top: 80%;
+    left: 5%;
+    font-size: 50px;
     font-weight: 800;
     font-style: italic;
     color: rgba(255, 255, 255, 0.04);
@@ -90,11 +104,8 @@
 }
 .container .card .imgBx img{
     position: absolute;
-    /* top: 75%; */
-    /* left: 50%; */
-    /* transform: translate(-50%, -50%) rotate(-25deg); */
     width: 250px;
-   
+    margin-top: 40px;
 }
 .container .card .contentBx {
     position: absolute;
@@ -169,11 +180,8 @@
     transition: 0.5s;
 }
 .container .card .contentBx input{
-    /* display: inline-block; */
-    /* padding: 10px 20px; */
     background: #fff;
     border-radius: 4px;
-    /* margin-top: 10px; */
     text-decoration: none;
     font-weight: 600;
     color: #111;
@@ -192,3 +200,4 @@
     transform: translate(0px);
     transition-delay: 0.75s;
 }
+
