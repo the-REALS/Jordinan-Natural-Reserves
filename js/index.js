@@ -13,7 +13,6 @@ function currentSlide(n) {
 
  var slidesDots = document.querySelector('#slidesDots');
  slidesDots.addEventListener('click',function(event){
-  console.log(event.target);
   var first = event.target.id;
   currentSlide(first);
 } );
