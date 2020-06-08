@@ -73,19 +73,24 @@ function currentSlide(n) {
             dots.style.display = "inline";
             btnText.innerHTML = "Read more"; 
             moreText.style.display = "none";
+            
+            
           } 
            if (dots1.style.display === "none") {
             dots1.style.display = "inline";
             btnText1.innerHTML = "Read more"; 
             moreText1.style.display = "none";
+            
           }
           if (dots2.style.display === "none") {
             dots2.style.display = "inline";
             btnText2.innerHTML = "Read more"; 
             moreText2.style.display = "none";
+            
           }
           
           else {
+            
             dots.style.display = "none";
             dots1.style.display = "none";
             dots2.style.display = "none";
@@ -97,7 +102,7 @@ function currentSlide(n) {
             moreText.style.display = "inline";
             moreText1.style.display = "inline";
             moreText2.style.display = "inline";
-
+          
           }
         }
    
