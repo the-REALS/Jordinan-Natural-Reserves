@@ -1,37 +1,88 @@
 'use strict'
 var container = document.querySelector('#items');
+var sTotal = document.querySelector('#cart-subtotal');
+var taxTotal = document.querySelector('#cart-tax');
+var gTotoal = document.querySelector('#cart-total');
 
-var products;
+var products = [];
 function getProduct(){
     var getproduct = localStorage.getItem('item');
     if(getproduct){
     products = JSON.parse(getproduct);
     console.log(products);
     }
-  }
+}
+
+var cont = 0;
+
 function renderCart(){
     getProduct();
-    for( var i=0; i< products.length; i++){
-        var tRow = document.createElement('tr');
-        tRow.setAttribute('id',i);
-        container.appendChild(tRow);
-        var tData1 = document.createElement('td');
-        tRow.appendChild(tData1);
-        tData1.textContent = 'X';
-        var tData2 = document.createElement('td');
-        tRow.appendChild(tData2);
-        tData2.textContent= products[i].name;
-        var tData3 = document.createElement('td');
-        tRow.appendChild(tData3);
-        tData3.textContent = products[i].quantity;
-        var tData4 = document.createElement('td');
-        tRow.appendChild(tData4);
-        tData4.textContent = products[i].price;
-        var tData5 = document.createElement('td');
-        var image= document.createElement('img');
-        image.src = products[i].path;
-        tData5.appendChild(image);
-        tRow.appendChild(tData5);
+    for(var i=0; i< products.length; i++){
+        var div1 = document.createElement('div');
+        div1.setAttribute('class', 'product');
+        var div2 = document.createElement('div');
+        div2.setAttribute('class', 'product-image');
+        var img1 = document.createElement('img');
+        img1.src = products[i].path;
+        div2.appendChild(img1);
+        div1.appendChild(div2);
+        var div3 = document.createElement('div');
+        div3.textContent = products[i].price;
+        div3.setAttribute('class', 'product-price');
+        div1.appendChild(div3);
+        var div4 = document.createElement('div');
+        div4.textContent = products[i].quantity;
+        div4.setAttribute('class', 'product-quantity');
+        div1.appendChild(div4);
+        var div5 = document.createElement('div');
+        div5.setAttribute('class', 'product-removal');
+        var button1 = document.createElement('button');
+        button1.setAttribute('class', 'remove-product');
+        button1.id = i;
+        button1.textContent = `Remove`;
+        div5.appendChild(button1);
+        div1.appendChild(div5);
+        var div6 = document.createElement('div');
+        div6.setAttribute('class', 'product-line-price');
+        div6.textContent = `${products[i].total}$`
+        div1.appendChild(div6);
+        container.appendChild(div1);
+        
+      }
     }
+
+    function count (){
+      for (var i =0; i < products.length; i++)
+      cont += products[i].total;
+      sTotal.textContent = `${cont} $`
+    }
+
+
+function clearTable() {
+        container.innerHTML = ``;
 }
+
+container.addEventListener('click', removeItemFromCart);
+function removeItemFromCart(event) {
+
+    var deleteId;
+  
+    if (event.target.textContent === 'Remove') {
+      deleteId = event.target.id;
+      cont = 0;
+      products.splice(deleteId, 1);
+      
+      setProduct();
+      clearTable();
+      renderCart();
+      count ();
+    }
+  }
+
+  function setProduct(){
+    var item = JSON.stringify(products);
+    localStorage.setItem('item', item);
+}
+
 renderCart();
+count ();
