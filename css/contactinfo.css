@@ -67,15 +67,15 @@ h3 img {
   direction: rtl;
   width: 100%;
   position: relative;
-  text-align: center;
+  text-align: left;
 
 }
 .rating > span {
   display: inline-block;
   position: relative;
   color: #09c;
-  font-size: 40px;
-  width: 40px;
+  font-size: 20px;
+  width: 20px;
 }
 .rating > span:hover:before,
 .rating > span:hover ~ span:before {
