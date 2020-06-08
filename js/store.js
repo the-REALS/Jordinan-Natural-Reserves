@@ -52,3 +52,28 @@ function getProduct(){
   products = JSON.parse(getproduct);
   }
 }
+
+var filterButns = document.querySelector('#filter-btns').children;
+var main = document.querySelector('.mainGalry').children;
+
+for(var i = 0; i < filterButns.length; i++){
+filterButns[i].addEventListener('click', function(){
+    for(var j = 0; j < filterButns.length; j++){
+        filterButns[j].classList.remove('active');
+    }
+    this.classList.add('active');
+    var targ = this.getAttribute("data-target");
+
+    for(var k = 0; k < main.length; k++){
+        main[k].style.display = 'none';
+        if(targ == main[k].getAttribute("data-id")){
+            main[k].style.display = 'block';
+        }
+        if(targ == "all"){
+            main[k].style.display = 'block';
+        }
+    }
+    console.log();
+})
+
+}
