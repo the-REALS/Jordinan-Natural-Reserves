@@ -5,189 +5,215 @@
     <title>Contact Us</title>
     <script src="https://kit.fontawesome.com/4041ed350e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/contactinfo.css" >
+    <link rel="stylesheet" href="css/contactinfo.css">
 </head>
+
 <body>
-<header>
-    <!-- Nav with backgound  -->
-    <div id="background">
-        <div class="topnav">
-            <img src="img/logo.PNG" alt="logo" id="logo">
-            <div id="myLinks">
-                <a href="index.html"><i class="fas fa-home"></i> HOME</a>
-                <a href="store.html"><i class="fas fa-store"></i> STORE</a>
-                <a href="contactinfo.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
-                <a href="about-us.html"><i class="far fa-address-card"></i> ABOUT-US</a>
-                <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART </a>
+    <header>
+        <!-- Nav with backgound  -->
+        <div id="background">
+            <div class="topnav">
+                <img src="img/logo.PNG" alt="logo" id="logo">
+                <div id="myLinks">
+                    <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+                    <a href="store.html"><i class="fas fa-store"></i> STORE</a>
+                    <a href="contactinfo.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
+                    <a href="about-us.html"><i class="far fa-address-card"></i> ABOUT-US</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART </a>
+                </div>
+                <!-- tog btn -->
+                <input type="submit" id="icon" value="" title="show the pages">
             </div>
-           <!-- tog btn -->
-            <input type="submit" id="icon" value="" title="show the pages">
         </div>
-    </div>
-    
 
-</header>
-    <div>
 
-    <h2>Contact</h2>
+    </header>
+    <div id="wrapper">
 
-    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Reach Now!</button>
+        <h2 id="contactUs">CONTACT US</h2>
 
-    <div id="id01" class="modal">
-        <span onclick="document.getElementById('id01').style.display='none'" class="close"
-            title="Close Modal">&times;</span>
-        <form class="modal-content" action="/action_page.php">
-            <div class="container">
-                <h1>Contact Us</h1>
-                <p>Join our community to protect nature environment</p>
-                <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                <br>
-                <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                <br>
-                <label for="Email">Email</label>
-                <input type="text" id="Email" name="firstname" placeholder="Email">
-                <br>
-                <label for="subject">Subject</label>
-                <br>
-                <textarea id="subject" name="subject" placeholder="Write something.."
-                    style="height:100px; width: 1100px;"></textarea>
+        <button id="reachBotton" onclick="document.getElementById('id01').style.display='block'"
+            style="width:auto;">Reach Now!</button>
 
-                <p>We respect your privacey learn more<a href="#" style="color:dodgerblue"> Privacy Policy</a>.</p>
+        <div id="id01" class="modal">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close"
+                title="Close Modal">&times;</span>
+            <form class="modal-content" action="/action_page.php">
+                <div class="container">
+                    <h1 id="contactUsReachBotton">Contact Us</h1>
+                    <p id="paragraphJoin">Join our community to protect nature environment</p>
+                    <label class="information" for="fname">First Name :</label>
+                    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                    <br>
+                    <label class="information" for="lname">Last Name :</label>
+                    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                    <br>
+                    <label class="information" for="Email">Email :</label>
+                    <input type="text" id="Email" name="firstname" placeholder="Email">
+                    <br>
+                    <label class="information" for="subject">Subject :</label>
+                    <br>
+                    <textarea id="subject" name="subject" placeholder="Write something.."
+                        style="height:100px; width: 1030px;"></textarea>
 
-                <div class="clearfix">
-                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                        class="cancelbtn">Cancel</button>
-                    <button type="submit" class="signupbtn">Send</button>
+                    <p>We respect your privacey learn more<a href="#" style="color:dodgerblue"> Privacy Policy</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                            class="cancelbtn">Cancel</button>
+                        <button type="submit" class="signupbtn">Send</button>
+                    </div>
                 </div>
-            </div>
-        </form>
-    </div>
+            </form>
+        </div>
 
-    <script>
-        // Get the modal
-        var modal = document.getElementById('id01');
+        <script>
+            // Get the modal
+            var modal = document.getElementById('id01');
 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
             }
-        }
-    </script>
-    <div>
+        </script>
 
 
 
-        <form name="feed" id="dataform" action="/action_page.php" onsubmit="return checkFeedback()">
-            <fieldset>
-                <legend>
-                    <h3>
-                        Guest Feedback
-                    </h3>
-                </legend>
+        <div id="form">
+            <form name="feed" id="dataform" action="/action_page.php" onsubmit="return checkFeedback()">
+                <fieldset>
+                    <legend>
+                        <h3 id="guestHeaderTag">GUEST FEEDBACK </h3>
+                    </legend>
 
-                <label for="liky">What did you like most about the place?</label>
-                <input required placeholder="Enter your favorite" name="1" type="text" id="gLik">
+                    <label for="liky">What did you like most about the place?</label>
+                    <input required placeholder="Enter your favorite" name="1" type="text" id="gLik">
 
-                <br>
-                <label for="hits">Would you like to give any suggestions?</label>
-                <input required placeholder="Enter your favorite" name="2" type="text" id="gSug">
-                <br>
-                <label for="referal">would you tell your friends?</label>
-                <input name="3" type="checkbox" id="gRef">
-                <br>
+                    <br>
+                    <label for="hits">Would you like to give any suggestions?</label>
+                    <input required placeholder="Enter your favorite" name="2" type="text" id="gSug">
+                    <br>
+                    <label for="referal">would you tell your friends?</label>
+                    <input name="3" type="checkbox" id="gRef">
+                    <br>
 
-                <div class="rating">
-                    <span title="five stars">&#9734;</span>
-                    <span title="four stars">&#9734;</span>
-                    <span title="three stars">&#9734;</span>
-                    <span title="two stars">&#9734;</span>
-                    <span title="one star">&#9734;</span>
-                </div>
-                <input type="submit" id="subs">
+                    <div class="rating">
+                        <span title="five stars">&#9734;</span>
+                        <span title="four stars">&#9734;</span>
+                        <span title="three stars">&#9734;</span>
+                        <span title="two stars">&#9734;</span>
+                        <span title="one star">&#9734;</span>
+                    </div>
+                    <input type="submit" id="subs">
 
-            </fieldset>
-        </form>
-    </div>
+                </fieldset>
+            </form>
+        </div>
 
-    <div>
-        <h1>
-            Help Animals
-        </h1>
-        <p>
-            The shocking number of animal cruelty cases reported every day is just the tip of the iceberg—most cases are
-            never reported. Unlike violent crimes against people, cases of animal abuse are not compiled by state or
-            federal agencies, making it difficult to calculate just how common they are. However, we can use the
-            information that is available to try to understand and prevent cases of abuse. </p>
-    </div>
-    <div>
-        <button>
-            <a href="donate.html">
-                <h2>Donate Now!</h2>
-            </a>
+        <div>
+            <h1 class="headerh">Help Animals</h1>
 
-        </button>
-    </div>
-    <script src="js/contactUs.js"></script>
-    <div>
-        <img src="https://p2.piqsels.com/preview/638/661/89/elephant-baby-mother-father.jpg" alt="">
-    </div>
+            <p class="paragraphAnimals">
+                The shocking number of animal cruelty cases reported every day is just the tip of the iceberg—most
+                cases
+                are
+                never reported. Unlike violent crimes against people, cases of animal abuse are not compiled by
+                state or
+                federal agencies, making it difficult to calculate just how common they are. However, we can use the
+                information that is available to try to understand and prevent cases of abuse. </p>
+        </div>
+        <div>
+            <button>
+                <a href="donate.html">
+                    <h2>Donate Now!</h2>
+                </a>
 
+            </button>
+        </div>
 
-<footer class="footer-distributed">
- 
-    <div class="footer-left">
+        <div id="elephantImg">
+            <img src="img/elephant.jpg" alt="error in your img">
+        </div>
 
-    <h3>The<span> REALS</span></h3>
+        <h1 class="headerh">LONGEVITY & HEALTH PROBLEMS</h1>
+        <p class="paragraphAnimals">In the wild, elephants can live to be about 70 years old. In a survey of 4,500
+            captive elephants worldwide,
+            among African elephants, zoo-born females live an average of 16.9 years in zoos, while those in the wild
+            make it to 56. Asian elephants, the more endangered of the two species, live 18.9 years in captivity and
+            41.7 in the wild. (Time 2008).
 
-    <p class="footer-links">
-    <a href="index.html">Home</a>
-·
-    <a href="cart.html">Cart</a>
-·
-    <a href="store.html">Store</a>
-    </p>
+            Captive elephants suffer from chronic health problems such as tuberculosis, arthritis, and foot
+            abscesses,
+            which nearly always lead to premature death.</p>
 
-    <p class="footer-company-name">The Reals &copy; 2019</p>
-    </div>
-
-    <div class="footer-center">
-
-    <div>
-    <i class="fa fa-map-marker"></i>
-    <p><span>Prince Muhammad Street</span> Amman, Jordan</p>
-    </div>
-    <div>
-    <i class="fa fa-phone"></i>
-    <p>+1 555 123456</p>
-    </div>
-
-    <div>
-    <!-- <i class="fa fa-envelope"></i> -->
-    <p><a href="#">The-Reals@yahoo.com</a></p>
-    </div>
+        <h1 class="headerh">HUMANS</h1>
+        <p class="paragraphAnimals">Elephants have no natural predators. However, lions will sometimes prey on young
+            or weak elephants in the
+            wild. The main risk to elephants is from humans through poaching and destruction of their habitat. At
+            the
+            turn of the 20th century, there were a few million African elephants and about 100,000 Asian elephants.
+            Current data suggests, there is an estimated 450,000-650,000 African elephants and between 25,600-32,750
+            wild Asian elephants.</p>
 
     </div>
+    <footer class="footer-distributed">
 
-    <div class="footer-right">
+        <div class="footer-left">
 
-    <p class="footer-company-about">
-    <span>About the company</span>
-    The Reals &amp; .
-    <!-- information about Us -->
-    </p>
+            <h3>The<span> REALS</span></h3>
 
-    <div class="footer-icons">
+            <p class="footer-links">
+                <a href="index.html">Home</a>
+                ·
+                <a href="cart.html">Cart</a>
+                ·
+                <a href="store.html">Store</a>
+            </p>
 
-    <a href="#"><i class="fa fa-facebook"></i></a>
-    <a href="#"><i class="fa fa-twitter"></i></a>
-    <!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
-    <!-- <a href="#"><i class="fa fa-github"></i></a> -->
+            <p class="footer-company-name">The Reals &copy; 2020</p>
+        </div>
 
-    </div>
-    </div>
+        <div class="footer-center">
+
+            <div>
+                <i class="fa fa-map-marker"></i>
+                <p><span>Prince Muhammad Street</span> Amman, Jordan</p>
+            </div>
+            <div>
+                <i class="fa fa-phone"></i>
+                <p>+1 555 123456</p>
+            </div>
+
+            <div>
+                <!-- <i class="fa fa-envelope"></i> -->
+                <p><a href="#">The-Reals@yahoo.com</a></p>
+            </div>
+
+        </div>
+
+        <div class="footer-right">
+
+            <p class="footer-company-about">
+                <span>About the company</span>
+                The Reals &amp; .
+                <!-- information about Us -->
+            </p>
+
+            <div class="footer-icons">
+
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
+                <!-- <a href="#"><i class="fa fa-github"></i></a> -->
+
+            </div>
+        </div>
     </footer>
-    </body>
+
+    <script src="js/app.js"></script>
+    <script src="js/contactUs.js"></script>
+</body>
+
 </html>
