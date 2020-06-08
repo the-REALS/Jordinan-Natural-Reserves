@@ -14,15 +14,14 @@ for(var i=0; i<products.length; i++){
     new Products(products[i]);
 }
 
-
-var addToCart = document.querySelector('.container');
-
-addToCart.addEventListener('click',handelAddToCart);
-
+// adding eventListener for all carts
+var addToCart = document.querySelectorAll('.container');
+for(var i=0; i<addToCart.length; i++){
+addToCart[i].addEventListener('click',handelAddToCart);
+}
 function handelAddToCart (event){
-    console.log("w")
-    event.preventDefault();
     getProduct();
+    event.preventDefault();
     if(event.target.textContent == 'Add To Cart'){
     // Reach the path of the product image
     var productPath = event.path[2].children[0].children[0].attributes[0].nodeValue;
@@ -33,14 +32,16 @@ function handelAddToCart (event){
      console.log(event.path[2].children[0].children[0].attributes[1].nodeValue);
      // Reach the price of the product
     var productPrice = event.path[2].children[0].children[0].attributes[1].nodeValue; 
+    console.log(productPrice);
     //Reach the quantity
     var productQuantity = event.path[1].children[1].value;
     //creat p
+    console.log(productQuantity);
     new Products(productName, productPath, productPrice, productQuantity);
 
     // console.log(products);
     setProduct();
-    }
+}
 }
 //send the selected Product to the local srorage
 function setProduct(){
@@ -76,7 +77,7 @@ filterButns[i].addEventListener('click', function(){
         }
     }
     console.log();
-})
+});
 
 }
 
@@ -102,7 +103,7 @@ window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     nav.classList = "sticky";
-    console.log('hiii')
+    // console.log('hiii')
   } else {
     nav.classList = "topnav";
   }
