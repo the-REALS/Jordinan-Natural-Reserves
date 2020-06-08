@@ -6,6 +6,7 @@ this.name = name;
 this.path = path;
 this.price = price;
 this.quantity = quantity;
+this.total = this.quantity * this.price;
 products.push(this);
 }
 
