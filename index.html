@@ -11,37 +11,25 @@
 
 <body>
     <header>
-        <div id="background">
+           <!-- Nav with backgound  -->
+           <div id="background">
             <div class="topnav">
                 <img src="img/logo.PNG" alt="logo" id="logo">
                 <div id="myLinks">
                     <a href="index.html"><i class="fas fa-home"></i> HOME</a>
-                    <a href="about-us.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
                     <a href="store.html"><i class="fas fa-store"></i> STORE</a>
-                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART</a>
+                    <a href="contactinfo.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
+                    <a href="about-us.html"><i class="far fa-address-card"></i> ABOUT-US</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART </a>
                 </div>
-                <input type="submit" id="icon" value="" title="Go to the top">
+               <!-- tog btn -->
+                <input type="submit" id="icon" value="" title="show the pages">
             </div>
         </div>
-  
-    <div class="menu">
-        <span id="togg" class="toggle">
-            <i></i>
-            <i></i>
-            <i></i>
-        </span>
-        <div class="menucontent">
-            <ul>
-                <li href="index.html">HOME</li>
-                <li href="store.html">STORE</li>
-                <li href="cart.html">CART</li>
-                <li href="contact-us.html">ABOUT US</li>
-            </ul>
-        </div>
-    </div>
-</header>
-    <main>
+        <!-- End Nav  -->
 
+    </header>
+    <main>
         <div id="slideshowContainer">
             <h1 id="firstH1">OUR RESERVES IN JORDAN</h1>
 
@@ -164,22 +152,74 @@
 
                 </span>
                 <button onclick="readmeButton()" id="myBtn2">Read more</button>
-            </p>
-
-
+            </p>    
+        </div>
+        <div id="vedio-div">
             <video class="vid" width="500" height="350">
                 <source src="img/ducks.mp4" type="video/mp4">
-
             </video>
 
-        </div>
-
+        </div>  
 
     </main>
 
-    <footer>
+  
+    <footer class="footer-distributed">
+ 
+        <div class="footer-left">
+ 
+        <h3>The<span> REALS</span></h3>
+ 
+        <p class="footer-links">
+        <a href="index.html">Home</a>
+    ·
+        <a href="cart.html">Cart</a>
+    ·
+        <a href="store.html">Store</a>
+        </p>
+ 
+        <p class="footer-company-name">The Reals &copy; 2019</p>
+        </div>
+ 
+        <div class="footer-center">
+ 
+        <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Prince Muhammad Street</span> Amman, Jordan</p>
+        </div>
+        <div>
+        <i class="fa fa-phone"></i>
+        <p>+1 555 123456</p>
+        </div>
+ 
+        <div>
+        <!-- <i class="fa fa-envelope"></i> -->
+        <p><a href="#">The-Reals@yahoo.com</a></p>
+        </div>
+ 
+        </div>
+ 
+        <div class="footer-right">
+ 
+        <p class="footer-company-about">
+        <span>About the company</span>
+        The Reals &amp; .
+        <!-- information about Us -->
+        </p>
+ 
+        <div class="footer-icons">
+ 
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
+        <!-- <a href="#"><i class="fa fa-github"></i></a> -->
+ 
+        </div>
+ 
+        </div>
+ 
+        </footer>
 
-    </footer>
 
     <script src="js/app.js"></script>
     <script src="js/index.js"></script>
