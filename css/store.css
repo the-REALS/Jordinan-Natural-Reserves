@@ -6,6 +6,12 @@
     font-family: 'poppins', sans-serif;
 }
 
+.stor-header {
+    background-color: #9bdc28;
+    text-align: center;
+    margin: 50px 0 35px 0;
+}
+
 .filter-buttons {
     display: flex;
     justify-content: space-around;
@@ -59,7 +65,7 @@ li{
 .container .card:hover:before{
     clip-path: circle(300px at 80% -20%);
 }
-.container .card::after{
+/* .container .card::after{
     content: '';
     position: absolute;
     top: 0;
@@ -69,16 +75,16 @@ li{
     background: #9bdc28;
     clip-path: circle(150px at 80% 20%);
     transition: 0.5s ease-in-out;
-}
+} */
 .container .card:hover:before{
     clip-path: circle(300px at 80% -20%);
 }
 .container .card::after{
-    content: 'Tree';
+    content: 'THE REALS';
     position: absolute;
-    top: 30%;
-    left: -20%;
-    font-size: 12em;
+    top: 80%;
+    left: 5%;
+    font-size: 50px;
     font-weight: 800;
     font-style: italic;
     color: rgba(255, 255, 255, 0.04);
@@ -99,7 +105,7 @@ li{
 .container .card .imgBx img{
     position: absolute;
     width: 250px;
-   
+    margin-top: 40px;
 }
 .container .card .contentBx {
     position: absolute;
