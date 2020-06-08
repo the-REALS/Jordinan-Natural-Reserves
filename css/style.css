@@ -81,14 +81,14 @@
   left: 0;
   right: 0;
   margin: auto;
-  background-color: #ccc;
+  background-color: black;
   transition: transform 0.3s ease, opacity 0.1s ease 0.1s;
 }
 .menu.active span i{
 transform-origin: 47% 50%;
 width: 45%;
 height: 5px;
-left: 200vh;
+left: 110vh;
 }
 .menu span i:nth-child(1){
   top: 40%;
