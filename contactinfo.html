@@ -30,7 +30,9 @@
         <section class="formsec">
             <div class="formdiv">
                 <div class="container-contact">
-                    <h2> GET IN TOUCH</h2>
+                    <legend>
+                        GET IN TOUCH
+                    </legend>
                     <form action="/action_page.php">
                         <label for="fname">First Name</label>
                         <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -42,6 +44,7 @@
                         <input type="text" id="Email" name="firstname" placeholder="Email">
                         <br>
                         <label for="subject">Subject</label>
+                        <br>
                         <textarea id="subject" name="subject" placeholder="Write something.."
                             style="height:200px"></textarea>
                         <input type="submit" value="Submit">
@@ -50,20 +53,26 @@
             </div>
         </section>
 
-        <form id="dataform">
+        <form name="feed" id="dataform" action="/action_page.php" onsubmit="return checkFeedback()">
             <fieldset>
-            <legend>Guest info</legend>
-            <label for="gnama">Guest Name</label>
-            <input type="text" id="Client Name">
+            <legend>Guest Feedback</legend>
+            <!-- <label for="age">Age</label>
+            <input name="1" type="number" id="gAge">
             <br>
-            <label for="liky">Did you like the place?</label>
-            <input type="text" id="acceptence">
+            <label for="job">Job</label>
+            <input name="2" type="text" id="gOcc">
+            <br> -->
+            <label for="liky">What did you like most about the place?</label>
+            <input name="1" type="text" id="gLik">
+            <br>
+            <label for="hits">Would you like to give any suggestions?</label>
+            <input name="2" type="text" id="gSug">
             <br>
             <label for="referal">would you tell your friends?</label>
-            <input type="text" id="referal">
+            <input name="3" type="checkbox" id="gRef">
             <br>
-            <label for="goodToKnow">Are you coming again??</label>
-            <input type="text" id="consistency">
+            <label for="Rating">Rating</label>
+            <input name="4" type="number" id="gRating">
             <br>
             <input type="submit" id="subs">
             
@@ -87,6 +96,7 @@
               
           </button>
       </div>
+      <script src="js/contactUs.js"></script>
 </body>
 <footer>
     
