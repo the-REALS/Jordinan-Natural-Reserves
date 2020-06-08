@@ -31,33 +31,3 @@ function checkDon(){
          
     } 
 }
-
-
-  // for the navbar button
-  var links=document.getElementById("icon");
-  links.addEventListener('click',function(event){
-      event.preventDefault();
-      var displayOrHide=document.getElementById("myLinks")
-      if (displayOrHide.style.display === "inline-block") {
-          displayOrHide.style.display = "none";
-      } else {
-          displayOrHide.style.display = "inline-block";
-      }
-  });
-var nav = document.querySelector('.topnav');   
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-nav.classList = "sticky";
-console.log('hiii')
-} else {
-nav.classList = "topnav";
-}
-}
-
-var men = document.querySelector('.menu');
-  men.addEventListener('click', () =>{
-      men.classList.toggle('active');
-      console.log('ssss');
-  })
