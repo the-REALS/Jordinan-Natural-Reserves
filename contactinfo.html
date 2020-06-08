@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Contact Us</title>
     <link rel="stylesheet" href="css/contactinfo.css" >
@@ -44,87 +45,123 @@
 </header>
     <div>
 
-        <section class="formsec">
-            <div class="formdiv">
-                <div class="container-contact">
-                    <legend>
-                        GET IN TOUCH
-                    </legend>
-                    <form action="/action_page.php">
-                        <label for="fname">First Name</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
-                        <br>
-                        <label for="lname">Last Name</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-                        <br>
-                        <label for="Email">Email</label>
-                        <input type="text" id="Email" name="firstname" placeholder="Email">
-                        <br>
-                        <label for="subject">Subject</label>
-                        <br>
-                        <textarea id="subject" name="subject" placeholder="Write something.."
-                            style="height:200px"></textarea>
-                        <input type="submit" value="Submit">
-                    </form>
+    <h2>Contact</h2>
+
+    <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Reach Now!</button>
+
+    <div id="id01" class="modal">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close"
+            title="Close Modal">&times;</span>
+        <form class="modal-content" action="/action_page.php">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Join our community to protect nature environment</p>
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                <br>
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                <br>
+                <label for="Email">Email</label>
+                <input type="text" id="Email" name="firstname" placeholder="Email">
+                <br>
+                <label for="subject">Subject</label>
+                <br>
+                <textarea id="subject" name="subject" placeholder="Write something.."
+                    style="height:100px; width: 1100px;"></textarea>
+
+                <p>We respect your privacey learn more<a href="#" style="color:dodgerblue"> Privacy Policy</a>.</p>
+
+                <div class="clearfix">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                    <button type="submit" class="signupbtn">Send</button>
                 </div>
             </div>
-        </section>
+        </form>
+    </div>
+
+    <script>
+        // Get the modal
+        var modal = document.getElementById('id01');
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <div>
+
+
 
         <form name="feed" id="dataform" action="/action_page.php" onsubmit="return checkFeedback()">
             <fieldset>
-            <legend>Guest Feedback</legend>
-            <!-- <label for="age">Age</label>
-            <input name="1" type="number" id="gAge">
-            <br>
-            <label for="job">Job</label>
-            <input name="2" type="text" id="gOcc">
-            <br> -->
-            <label for="liky">What did you like most about the place?</label>
-            <input name="1" type="text" id="gLik">
-            <br>
-            <label for="hits">Would you like to give any suggestions?</label>
-            <input name="2" type="text" id="gSug">
-            <br>
-            <label for="referal">would you tell your friends?</label>
-            <input name="3" type="checkbox" id="gRef">
-            <br>
-            <label for="Rating">Rating</label>
-            <input name="4" type="number" id="gRating">
-            <br>
-            <input type="submit" id="subs">
-            
-        </fieldset>
-    </form>
-</div>
+                <legend>
+                    <h3>
+                        Guest Feedback
+                    </h3>
+                </legend>
+
+                <label for="liky">What did you like most about the place?</label>
+                <input required placeholder="Enter your favorite" name="1" type="text" id="gLik">
+
+                <br>
+                <label for="hits">Would you like to give any suggestions?</label>
+                <input required placeholder="Enter your favorite" name="2" type="text" id="gSug">
+                <br>
+                <label for="referal">would you tell your friends?</label>
+                <input name="3" type="checkbox" id="gRef">
+                <br>
+
+                <div class="rating">
+                    <span title="five stars">&#9734;</span>
+                    <span title="four stars">&#9734;</span>
+                    <span title="three stars">&#9734;</span>
+                    <span title="two stars">&#9734;</span>
+                    <span title="one star">&#9734;</span>
+                </div>
+                <input type="submit" id="subs">
+
+            </fieldset>
+        </form>
+    </div>
+
     <div>
-          <img src="https://p2.piqsels.com/preview/638/661/89/elephant-baby-mother-father.jpg" alt="">
-      </div>
-      <div>
-          <h2>
-              Help Animals
-          </h2>
-          <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis quod a, assumenda aut excepturi non quae asperiores natus, laboriosam, aperiam quos voluptatem! Nemo tenetur libero repellendus consequatur ipsam. Odio.
-          </p>
-      </div>
-      <div>
-          <button>
-            <a href="donate.html">Donate Now!</a>
-              
-          </button>
-      </div>
-      <script src="js/contactUs.js"></script>
+        <h1>
+            Help Animals
+        </h1>
+        <p>
+            The shocking number of animal cruelty cases reported every day is just the tip of the iceberg—most cases are
+            never reported. Unlike violent crimes against people, cases of animal abuse are not compiled by state or
+            federal agencies, making it difficult to calculate just how common they are. However, we can use the
+            information that is available to try to understand and prevent cases of abuse. </p>
+    </div>
+    <div>
+        <button>
+            <a href="donate.html">
+                <h2>Donate Now!</h2>
+            </a>
+
+        </button>
+    </div>
+    <script src="js/contactUs.js"></script>
+    <div>
+        <img src="https://p2.piqsels.com/preview/638/661/89/elephant-baby-mother-father.jpg" alt="">
+    </div>
 </body>
 <footer>
-    
-        <h3>
-            For a better envoronment<img
-                src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pin-location.png">Find our branches... <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Phone_Shiny_Icon.svg/256px-Phone_Shiny_Icon.svg.png">Dial.076543210
-            ... <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png">
-            Facebook.com/RealReserve/
-        </h3>
-  
+
+    <h3>
+        For a better envoronment<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pin-location.png">Find our
+        branches... <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Phone_Shiny_Icon.svg/256px-Phone_Shiny_Icon.svg.png">Dial.076543210
+        ... <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png">
+        Facebook.com/RealReserve/
+    </h3>
+
 </footer>
+
 </html>
