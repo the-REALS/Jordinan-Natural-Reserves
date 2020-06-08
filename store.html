@@ -3,297 +3,378 @@
 
 <head>
     <meta charset="UTF-8">
+    <!-- this script for the icons  -->
+    <script src="https://kit.fontawesome.com/4041ed350e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/store.css">
+    <title>Store</title>
 </head>
-<div>
-<body>
-    <h1 class="stor-header">Our Latest Products</h1>
-    <div class="filter-buttons">
-        <ul id="filter-btns">
-            <li class="active" data-target="all">ALL</li>
-            <li data-target="Cactus">Cactus</li>
-            <li data-target="Hats">Hats</li>
-            <li data-target="Axes">Axes</li>
-            <li data-target="Shirts">Shirts</li>
-            <li data-target="Tent">Tent</li>  
-        </ul>
-    </div>
 
-        <div class="flex-container mainGalry">
-            <div class="container" data-id="Cactus">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/cactus 1.png" price="20">
-                        <h2>Cactus Tree</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>20$</span>
-                            <span class="oldPrice"><del>35$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
+<body>
+    <header>
+        <!-- Nav with backgound  -->
+        <div id="background">
+            <div class="topnav">
+                <img src="img/logo.PNG" alt="logo" id="logo">
+                <div id="myLinks">
+                    <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+                    <a href="store.html"><i class="fas fa-store"></i> STORE</a>
+                    <a href="contactinfo.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
+                    <a href="about-us.html"><i class="far fa-address-card"></i> ABOUT-US</a>
+                    <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART </a>
                 </div>
-            </div>
-            <div class="container" data-id="Cactus">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/cactus 2.png" price="10">
-                        <h2>Cactus Flower</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price:</h3>
-                            <span>10$</span>
-                            <span class="oldPrice"><del>23$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Hats">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/hat 1.png" price="11" >
-                        <h2>Safari Hat</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>11$</span>
-                            <span class="oldPrice"><del>17$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Hats">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/hat 2.png" price="11">
-                        <h2>Safari Hat</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>11$</span>
-                            <span class="oldPrice"><del>17$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Hats">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/hat 3.png" price="11">
-                        <h2>Safari Hat</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>11$</span>
-                            <span class="oldPrice"><del>17$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Axes">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/pick 1.png" price="22">
-                        <h2>Climbing Ax</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>22$</span>
-                            <span class="oldPrice"><del>34$</del></span>>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Axes">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/pick 2.png" price="30">
-                        <h2>Climbing Ax</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>30$</span>
-                            <span class="oldPrice"><del>41$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Axes">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/pick 3.png" price="33">
-                        <h2>Climbing Ax</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>33$</span>
-                            <span class="oldPrice"><del>39$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Shirts">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/shirt 1.png" price="51">
-                        <h2>Safari Shirt</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>51$</span>
-                            <span class="oldPrice"><del>63$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Shirts">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/shirt 2.png" price="66">
-                        <h2>Jengl Shirt</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>66$</span>
-                            <span class="oldPrice"><del>77$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Shirts">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/shirt 3.png" price="58">
-                        <h2>Climbed Shirt</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>58$</span>
-                            <span class="oldPrice"><del>70$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Shirts">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/shirt 4.png" 56>
-                        <h2>Summer Shirt</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>56$</span>
-                            <span class="oldPrice"><del>80$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Shirts">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/shirt 5.png" height="250px" price="29">
-                        <h2>Summer Shirt</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>29$</span>
-                            <span class="oldPrice"><del>38$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Tent">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/tent 1.png" price="390">
-                        <h2>Desert tent</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>390$</span>
-                            <span class="oldPrice"><del>410$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Tent">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/tent 2.png" price="536">
-                        <h2>Mountain Tent</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>536$</span>
-                            <span class="oldPrice"><del>550$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
-            </div>
-            <div class="container" data-id="Tent">
-                <div class="card">
-                    <div class="imgBx">
-                        <img src="img/tent 3.png" price="470">
-                        <h2>Winter tent</h2>
-                    </div>
-                    <div class="contentBx">
-                        <div class="size">
-                            <h3>Price :</h3>
-                            <span>470$</span>
-                            <span class="oldPrice"><del>512$</del></span>
-                        </div>
-                        <input type="number" class="quantity" placeholder="Quantity" required>
-                        <a href="#" class="addToCart">Add To Cart</a>
-                    </div>
-                </div>
+               <!-- tog btn -->
+                <input type="submit" id="icon" value="" title="show the pages">
             </div>
         </div>
+        <!-- End Nav  -->
+    </header>
+    <!-- i put your html in the main just oki azoz to be more readable . give him some css such as margin top oki for the main -->
+    <main>
+         <h1 class="stor-header">Our Latest Products</h1>
+        <div class="filter-buttons">
+            <ul id="filter-btns">
+                <li class="active" data-target="all">ALL</li>
+                <li data-target="Cactus">Cactus</li>
+                <li data-target="Hats">Hats</li>
+                <li data-target="Axes">Axes</li>
+                <li data-target="Shirts">Shirts</li>
+                <li data-target="Tent">Tent</li>  
+            </ul>
+        </div>
+
+            <div class="flex-container mainGalry">
+                <div class="container"  data-id="Cactus">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/cactus 1.png" price="20">
+                            <h2>Cactus Tree</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>20$</span>
+                                <span class="oldPrice"><del>35$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Cactus">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/cactus 2.png" price="10">
+                            <h2>Cactus Flower</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price:</h3>
+                                <span>10$</span>
+                                <span class="oldPrice"><del>23$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Hats">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/hat 1.png" price="11" >
+                            <h2>Safari Hat</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>11$</span>
+                                <span class="oldPrice"><del>17$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Hats">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/hat 2.png" price="11">
+                            <h2>Safari Hat</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>11$</span>
+                                <span class="oldPrice"><del>17$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Hats">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/hat 3.png" price="11">
+                            <h2>Safari Hat</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>11$</span>
+                                <span class="oldPrice"><del>17$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Axes">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/pick 1.png" price="22">
+                            <h2>Climbing Ax</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>22$</span>
+                                <span class="oldPrice"><del>34$</del></span>>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Axes">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/pick 2.png" price="30">
+                            <h2>Climbing Ax</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>30$</span>
+                                <span class="oldPrice"><del>41$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Axes">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/pick 3.png" price="33">
+                            <h2>Climbing Ax</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>33$</span>
+                                <span class="oldPrice"><del>39$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Shirts">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/shirt 1.png" price="51">
+                            <h2>Safari Shirt</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>51$</span>
+                                <span class="oldPrice"><del>63$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Shirts">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/shirt 2.png" price="66">
+                            <h2>Jengl Shirt</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>66$</span>
+                                <span class="oldPrice"><del>77$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Shirts">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/shirt 3.png" price="58">
+                            <h2>Climbed Shirt</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>58$</span>
+                                <span class="oldPrice"><del>70$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Shirts">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/shirt 4.png" 56>
+                            <h2>Summer Shirt</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>56$</span>
+                                <span class="oldPrice"><del>80$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Shirts">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/shirt 5.png" height="250px" price="29">
+                            <h2>Summer Shirt</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>29$</span>
+                                <span class="oldPrice"><del>38$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Tent">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/tent 1.png" price="390">
+                            <h2>Desert tent</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>390$</span>
+                                <span class="oldPrice"><del>410$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Tent">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/tent 2.png" price="536">
+                            <h2>Mountain Tent</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>536$</span>
+                                <span class="oldPrice"><del>550$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container" data-id="Tent">
+                    <div class="card">
+                        <div class="imgBx">
+                            <img src="img/tent 3.png" price="470">
+                            <h2>Winter tent</h2>
+                        </div>
+                        <div class="contentBx">
+                            <div class="size">
+                                <h3>Price :</h3>
+                                <span>470$</span>
+                                <span class="oldPrice"><del>512$</del></span>
+                            </div>
+                            <input type="number" class="quantity" placeholder="Quantity" required>
+                            <a href="#" class="addToCart">Add To Cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </main>
+ 
+    <footer class="footer-distributed">
+ 
+        <div class="footer-left">
+ 
+        <h3>The<span> REALS</span></h3>
+ 
+        <p class="footer-links">
+        <a href="index.html">Home</a>
+    ·
+        <a href="cart.html">Cart</a>
+    ·
+        <a href="store.html">Store</a>
+        </p>
+ 
+        <p class="footer-company-name">The Reals &copy; 2019</p>
+        </div>
+ 
+        <div class="footer-center">
+ 
+        <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Prince Muhammad Street</span> Amman, Jordan</p>
+        </div>
+        <div>
+        <i class="fa fa-phone"></i>
+        <p>+1 555 123456</p>
+        </div>
+ 
+        <div>
+        <!-- <i class="fa fa-envelope"></i> -->
+        <p><a href="#">The-Reals@yahoo.com</a></p>
+        </div>
+ 
+        </div>
+ 
+        <div class="footer-right">
+ 
+        <p class="footer-company-about">
+        <span>About the company</span>
+        The Reals &amp; .
+        <!-- information about Us -->
+        </p>
+ 
+        <div class="footer-icons">
+ 
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
+        <!-- <a href="#"><i class="fa fa-github"></i></a> -->
+ 
+        </div>
+ 
+        </div>
+ 
+        </footer>
+
             <script src="js/store.js"></script>
     </body>
 

@@ -1,144 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
-<<<<<<< HEAD
 
 <head>
-    <!-- /RB -->
-    <title>Dontion</title>
-    <link rel="stylesheet" href="css/contactinfo.css">
+  <!-- /RB -->
+  <!-- please do not take any style  from any other page Just create new one but don't worry i do it ...........   -->
+  <!-- <link rel="stylesheet" href="css/contactinfo.css"> -->
+  <script src="https://kit.fontawesome.com/4041ed350e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/donate.css">
+  <title>Dontion</title>
 </head>
-<header>
-    <h1>
-        Donate Today to Help
-    </h1>
-</header>
 
 <body>
-    <div>
-        <img src="https://i.pinimg.com/originals/63/d7/2a/63d72a4c56a567b1d718253538109e36.jpg" alt="">
-    </div>
-    <div>
-
-        <form name="don" id="donationform"  action="/action_page.php" onsubmit="return checkDon()">
-            <fieldset>
-                <legend>Donation Data</legend>
-                <label for="dnama">Your Name</label>
-                <input required placeholder="Enter name..." name="3" type="text" id="doname">
-                <br>
-                <label for="organ">Donate as an organization</label>
-                <input type="checkbox" id="organ">
-                <br>
-                <label for="money">How much would you like to give?</label>
-                <input required placeholder="$$$" name="4" type="number" id="money">
-                <br>
-                <p>
-                    Thank you very much you are a good person
-                </p>
-                <input type="submit" id="subs">
-
-            </fieldset>
-        </form>
-    </div>
-
-
-</body>
-<footer>
-
-    <h3>
-        For a better envoronment<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pin-location.png">Find our
-        branches... <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Phone_Shiny_Icon.svg/256px-Phone_Shiny_Icon.svg.png">Dial.076543210
-        ... <img
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png">
-        Facebook.com/RealReserve/
-    </h3>
-
-</footer>
-
-</html>
-=======
-  <head>
-    <title>Dontion</title>
-    <link rel="stylesheet" href="css/contactinfo.css" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://kit.fontawesome.com/4041ed350e.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-      
-    <header>
-        <h1>
-            Donate Today to Help
-          </h1>
-        <div id="background">
-            <div class="topnav">
-                <img src="img/logo.PNG" alt="logo" id="logo">
-                <div id="myLinks">
-                    <a href="index.html"><i class="fas fa-home"></i> HOME</a>
-                    <a href="cart.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
-                    <a href="store.html"><i class="fas fa-store"></i> STORE</a>
-                    <a href="contact-us.html"><i class="fas fa-shopping-cart"></i> CART</a>
-                </div>
-                <input type="submit" id="icon" value="" title="Go to the top">
-            </div>
+  <!-- Rasheed Note form saleh you should put your HTML Code inside The BODY man EVEN the the header and the footer   -->
+  <header>
+    <!-- Nav with backgound  -->
+    <div id="background">
+      <div class="topnav">
+        <img src="img/logo.PNG" alt="logo" id="logo">
+        <div id="myLinks">
+          <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+          <a href="store.html"><i class="fas fa-store"></i> STORE</a>
+          <a href="contactinfo.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
+          <a href="about-us.html"><i class="far fa-address-card"></i> ABOUT-US</a>
+          <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART </a>
         </div>
-    </header>
-  
-    <div class="menu">
-        <span id="togg" class="toggle">
-            <i></i>
-            <i></i>
-            <i></i>
-        </span>
-        <div class="menucontent">
-            <ul>
-                <li href="index.html">HOME</li>
-                <li href="store.html">STORE</li>
-                <li href="cart.html">CART</li>
-                <li href="contact-us.html">ABOUT US</li>
-            </ul>
-        </div>
+        <!-- tog btn -->
+        <input type="submit" id="icon" value="" title="show the pages">
+      </div>
     </div>
 
-    <div>
-      <img
-        src="https://i.pinimg.com/originals/63/d7/2a/63d72a4c56a567b1d718253538109e36.jpg"
-        alt=""
-      />
-    </div>
-    <div>
-      <form id="donationform">
-        <fieldset>
-          <legend>Donation Data</legend>
-          <label for="dnama">Your Name</label>
-          <input type="text" id="doname" />
-          <br />
-          <label for="organ">Donate as an organization</label>
-          <input type="checkbox" id="organ" />
-          <br />
-          <label for="money">How much would you like to give?</label>
-          <input type="number" id="money" />
-          <br />
-          <p>
-            Thank you very much you are a good person
-          </p>
-          <input type="submit" id="subs" />
-        </fieldset>
-      </form>
-    </div>
-  </body>
-  <footer>
+  </header>
+
+
+  <div>
+    <img src="https://i.pinimg.com/originals/63/d7/2a/63d72a4c56a567b1d718253538109e36.jpg" alt="">
+  </div>
+  <div>
+
+    <form name="don" id="donationform" action="/action_page.php" onsubmit="return checkDon()">
+      <fieldset>
+        <legend>Donation Data</legend>
+        <label for="dnama">Your Name</label>
+        <input required placeholder="Enter name..." name="3" type="text" id="doname">
+        <br>
+        <label for="organ">Donate as an organization</label>
+        <input type="checkbox" id="organ">
+        <br>
+        <label for="money">How much would you like to give?</label>
+        <input required placeholder="$$$" name="4" type="number" id="money">
+        <br>
+        <p>
+          Thank you very much you are a good person
+        </p>
+        <input type="submit" id="subs">
+        
+      </fieldset>
+    </form>
+  </div>
+  <section>
     <h3>
-      For a better envoronment<img
-        src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pin-location.png"
-      />Find our branches...
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Phone_Shiny_Icon.svg/256px-Phone_Shiny_Icon.svg.png"
-      />Dial.076543210 ...
-      <img
-        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png"
-      />
+      For a better envoronment<img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/Pin-location.png">Find our
+      branches... <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/Phone_Shiny_Icon.svg/256px-Phone_Shiny_Icon.svg.png">Dial.076543210
+      ... <img
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Facebook_icon_2013.svg/768px-Facebook_icon_2013.svg.png">
       Facebook.com/RealReserve/
     </h3>
+  </section>
+<!-- Footer  -->
+<footer class="footer-distributed">
+ 
+  <div class="footer-left">
+
+  <h3>The<span> REALS</span></h3>
+
+  <p class="footer-links">
+  <a href="index.html">Home</a>
+·
+  <a href="cart.html">Cart</a>
+·
+  <a href="store.html">Store</a>
+  </p>
+
+  <p class="footer-company-name">The Reals &copy; 2019</p>
+  </div>
+
+  <div class="footer-center">
+
+  <div>
+  <i class="fa fa-map-marker"></i>
+  <p><span>Prince Muhammad Street</span> Amman, Jordan</p>
+  </div>
+  <div>
+  <i class="fa fa-phone"></i>
+  <p>+1 555 123456</p>
+  </div>
+
+  <div>
+  <!-- <i class="fa fa-envelope"></i> -->
+  <p><a href="#">The-Reals@yahoo.com</a></p>
+  </div>
+
+  </div>
+
+  <div class="footer-right">
+
+  <p class="footer-company-about">
+  <span>About the company</span>
+  The Reals &amp; .
+  <!-- information about Us -->
+  </p>
+
+  <div class="footer-icons">
+
+  <a href="#"><i class="fa fa-facebook"></i></a>
+  <a href="#"><i class="fa fa-twitter"></i></a>
+  <!-- <a href="#"><i class="fa fa-linkedin"></i></a> -->
+  <!-- <a href="#"><i class="fa fa-github"></i></a> -->
+
+  </div>
+
+  </div>
+
   </footer>
+  <!-- End Footer -->
+
+  
+  <script src="js/donate.js"></script>
+</body>
+
 </html>
->>>>>>> master

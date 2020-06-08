@@ -31,3 +31,18 @@ function checkDon(){
          
     } 
 }
+
+
+// This JS for Nav oki 
+var links=document.getElementById("icon");
+links.addEventListener('click',function(event){
+    event.preventDefault();
+    
+    var displayOrHide=document.getElementById("myLinks")
+    if (displayOrHide.style.display === "inline-block") {
+        displayOrHide.style.display = "none";
+    } else {
+        displayOrHide.style.display = "inline-block";
+    }
+});
+// End nav JS
