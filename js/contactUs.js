@@ -14,16 +14,16 @@ guestForm.addEventListener("submit", function(event){
 })
 
 
-function checkFeedback(){
-    var b1 = document.forms["feed"]["1"].value;
-    var b2 = document.forms["feed"]["2"].value;
+// function checkFeedback(){
+//     var b1 = document.forms["feed"]["1"].value;
+//     var b2 = document.forms["feed"]["2"].value;
     
-    if (b1 == "" ){
-        alert ("Anything you like?");
-        return false;
-    } 
-    if (b2 == "" ){
-        alert ("Any Suggestions?");
-        return false;
-    } 
-}
+//     if (b1 == "" ){
+//         alert ("Anything you like?");
+//         return false;
+//     } 
+//     if (b2 == "" ){
+//         alert ("Any Suggestions?");
+//         return false;
+//     } 
+// }

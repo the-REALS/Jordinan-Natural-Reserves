@@ -20,9 +20,7 @@
           </div>        
           </div>  
     -->
-    <h1>
-        Contact Us
-    </h1>
+    
 </header>
 <body>
     <div>
@@ -31,7 +29,10 @@
             <div class="formdiv">
                 <div class="container-contact">
                     <legend>
-                        GET IN TOUCH
+                        <h3>
+                            GET IN TOUCH
+                        </h3>
+                      
                     </legend>
                     <form action="/action_page.php">
                         <label for="fname">First Name</label>
@@ -46,7 +47,8 @@
                         <label for="subject">Subject</label>
                         <br>
                         <textarea id="subject" name="subject" placeholder="Write something.."
-                            style="height:200px"></textarea>
+                            style="height:100px; width: 600px;"></textarea>
+                            <br>
                         <input type="submit" value="Submit">
                     </form>
                 </div>
@@ -55,7 +57,11 @@
 
         <form name="feed" id="dataform" action="/action_page.php" onsubmit="return checkFeedback()">
             <fieldset>
-            <legend>Guest Feedback</legend>
+            <legend>
+                <h3>
+                    Guest Feedback
+                </h3>
+            </legend>
             <!-- <label for="age">Age</label>
             <input name="1" type="number" id="gAge">
             <br>
@@ -63,10 +69,11 @@
             <input name="2" type="text" id="gOcc">
             <br> -->
             <label for="liky">What did you like most about the place?</label>
-            <input name="1" type="text" id="gLik">
+            <input required placeholder="Enter your favorite" name="1" type="text" id="gLik">
+
             <br>
             <label for="hits">Would you like to give any suggestions?</label>
-            <input name="2" type="text" id="gSug">
+            <input required placeholder="Enter your favorite" name="2" type="text" id="gSug">
             <br>
             <label for="referal">would you tell your friends?</label>
             <input name="3" type="checkbox" id="gRef">
@@ -79,24 +86,24 @@
         </fieldset>
     </form>
 </div>
-    <div>
-          <img src="https://p2.piqsels.com/preview/638/661/89/elephant-baby-mother-father.jpg" alt="">
-      </div>
+    
       <div>
-          <h2>
+          <h1>
               Help Animals
-          </h2>
+          </h1>
           <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae corporis quod a, assumenda aut excepturi non quae asperiores natus, laboriosam, aperiam quos voluptatem! Nemo tenetur libero repellendus consequatur ipsam. Odio.
-          </p>
+            The shocking number of animal cruelty cases reported every day is just the tip of the iceberg—most cases are never reported. Unlike violent crimes against people, cases of animal abuse are not compiled by state or federal agencies, making it difficult to calculate just how common they are. However, we can use the information that is available to try to understand and prevent cases of abuse.          </p>
       </div>
       <div>
           <button>
-            <a href="donate.html">Donate Now!</a>
+            <a href="donate.html"><h2>Donate Now!</h2></a>
               
           </button>
       </div>
       <script src="js/contactUs.js"></script>
+      <div>
+        <img src="https://p2.piqsels.com/preview/638/661/89/elephant-baby-mother-father.jpg" alt="">
+    </div>
 </body>
 <footer>
     
