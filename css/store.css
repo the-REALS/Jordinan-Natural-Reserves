@@ -38,6 +38,9 @@
     width: 80%;
     margin: auto auto;
 }
+
+/************ cards style ************/
+
 .container{
     position: relative;
     margin-top: 20px;
@@ -198,6 +201,7 @@
     transform: translate(0px);
     transition-delay: 0.75s;
 }
+
 /* for Js Nav*/
 .sticky{
     position: fixed;
