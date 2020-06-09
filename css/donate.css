@@ -85,7 +85,46 @@ body{
     background-image: url(../img/backgraound.jpg);
   }
   
-  /* End */
+/* // the img  */
+  #image1 {
+    text-align: center;
+    margin-top: 40px;
+  }
+
+/* for donate form  */
+#donationform {
+  text-align: center;
+  border: 5px solid #ccc;
+  margin: auto  auto;
+  width: 50%;
+  box-shadow: 5px 10px 8px 10px #888888;
+ line-height: 40px;
+}
+
+#firstLefend{
+  padding-top: 8px;
+  font-size: 20px;
+  width: 180px;
+  height: 35px;
+  margin: auto auto;
+  margin-bottom: 20px;
+  background-color: #9bdc28;
+}
+#yourName {
+  margin: 25px 0 10px 0;
+}
+#subs {
+  border-radius: 30px;
+  width:90px;
+  height: 30px;
+  display: inline-block;
+background-color: #9bdc28;
+}
+
+/* end  */
+
+
+
   /* for Js */
   .sticky{
     position: fixed;
