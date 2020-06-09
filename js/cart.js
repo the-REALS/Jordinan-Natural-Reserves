@@ -28,14 +28,14 @@ function renderCart(){
         div1.appendChild(div2);
         var div3 = document.createElement('div');
         div3.textContent = products[i].price;
-        div3.setAttribute('class', 'product-price');
+        div3.setAttribute('class', 'product-price product-price22');
         div1.appendChild(div3);
         var div4 = document.createElement('div');
         div4.textContent = products[i].quantity;
-        div4.setAttribute('class', 'product-quantity');
+        div4.setAttribute('class', 'product-quantity product-quantity22');
         div1.appendChild(div4);
         var div5 = document.createElement('div');
-        div5.setAttribute('class', 'product-removal');
+        div5.setAttribute('class', 'product-removal product-removal22');
         var button1 = document.createElement('button');
         button1.setAttribute('class', 'remove-product');
         button1.id = i;
@@ -43,18 +43,19 @@ function renderCart(){
         div5.appendChild(button1);
         div1.appendChild(div5);
         var div6 = document.createElement('div');
-        div6.setAttribute('class', 'product-line-price');
+        div6.setAttribute('class', 'product-line-price product-line-price22');
         div6.textContent = `${products[i].total}$`
         div1.appendChild(div6);
         container.appendChild(div1);
-        
       }
     }
 
     function count (){
       for (var i =0; i < products.length; i++)
       cont += products[i].total;
-      sTotal.textContent = `${cont} $`
+      sTotal.textContent = `${cont} $`;
+      taxTotal.textContent = `${cont/20} $`
+      gTotoal.textContent = `${(cont/20)+ 15 +cont} $`
     }
 
 
@@ -86,14 +87,6 @@ function removeItemFromCart(event) {
 
 renderCart();
 count ();
-
-
-
-
-
-
-
-
 
 // Nav Script 
 
