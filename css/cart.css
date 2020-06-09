@@ -394,12 +394,14 @@ label {
     background-color: #a44;
 }
 
-.totals{
-  position: absolute;
+.totals{ 
+  /* position: absolute;
   right: 5%;
+  top: 89%; */
+  /* margin: auto auto; */
   width: 20%;
-  top: 89%;
-}  
+  float: right;
+}   
 .totals .totals-item {
     width: 100%;
     margin-bottom: 10px;

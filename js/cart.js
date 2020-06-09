@@ -27,7 +27,7 @@ function renderCart(){
         div2.appendChild(img1);
         div1.appendChild(div2);
         var div3 = document.createElement('div');
-        div3.textContent = products[i].price;
+        div3.textContent = products[i].price + '$';
         div3.setAttribute('class', 'product-price product-price22');
         div1.appendChild(div3);
         var div4 = document.createElement('div');
