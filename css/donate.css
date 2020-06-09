@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
 /* style HED */
 body{
   font-family: 'Source Serif Pro', serif;
@@ -21,22 +22,22 @@ body{
     z-index: 1;
   }
   #icon{
+    border: 0px;
+    border-radius: 5px;
+    border-color: #9bdc28;
     height: 32px;
-      background-position-y: center;
-      width: 39px;
-      background-image: url(../img/menu.png);
-      background-color: #292c2f;
-      background-repeat-x: no-repeat;
-      background-repeat-y: no-repeat;
-      background-origin: content-box;
-      background-position-x: center;
-      margin-right:2%;
-      margin-top: 7px;
-      position: absolute;
-      right:8% ;
-      right: 1%;
-      top: 8%;
-    
+    background-position-y: center;
+    width: 39px;
+    background-image: url(../img/menu2.png);
+    background-color: #9bdc28;
+    background-size: cover;
+    background-repeat-x: no-repeat;
+    background-position-x: center;
+    margin-right: 2%;
+    margin-top: 7px;
+    position: absolute;
+    right: 1%;
+    top: 8%;
   }
   
   .topnav #myLinks {
@@ -71,7 +72,29 @@ body{
   }
   
   /* Logo */
+  .sticky #logoname{
+    color: black;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 17px;
+    font-family: 'Piedra', cursive;
   
+  }
+  #logoname{
+    color: white;
+    display: inline-block;
+    font-size: 20px;
+    position: absolute;
+    top: 17px;
+    font-family: 'Piedra', cursive;
+  }
+  #logoname span{
+    color: #9bdc28;
+    
+  }
+  
+
   #logo{
     border-radius: 50px;
     width: 50px;
@@ -82,8 +105,9 @@ body{
     background-size: cover;
     width: 100%;
     height: 500px;
-    background-image: url(../img/backgraound.jpg);
+    background-image: url(../img/background3.jpg);
   }
+  
   
   /* End */
   /* for Js */
