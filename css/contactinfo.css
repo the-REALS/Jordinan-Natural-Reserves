@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@600&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Serif Pro', serif;
+}
+
+
 /* style HED */
 .topnav {
   overflow: hidden;
@@ -132,7 +141,7 @@ margin: 30px 0 30px 600px;
 }
 
 .active {
-  background-color: #4CAF50;
+  background-color: #9bdc28;
   color: white;
 }
 
@@ -142,12 +151,18 @@ margin: 30px 0 30px 600px;
   width: 100%;
   position: relative;
   text-align: left;
+  margin-top: 5px;
 
+}
+
+
+#image1 {
+  text-align: center;
 }
 .rating > span {
   display: inline-block;
   position: relative;
-  color: #09c;
+  color: #9bdc28;
   font-size: 20px;
   width: 20px;
 }
@@ -156,7 +171,7 @@ margin: 30px 0 30px 600px;
   content: "\2605";
   position: absolute;
   cursor: pointer;
-  color: #09c;
+  color: #9bdc28;
   -webkit-animation: mymove 2s;
   animation: mymove 2s;
   animation-direction:normal;
@@ -167,15 +182,8 @@ margin: 30px 0 30px 600px;
      
 /* Chrome, Safari, Opera */
 @-webkit-keyframes mymove {
-  from {color: #94e8ff;}
-  to {color: #09c;}
-}
-
-body {
-  font-family: 'Source Serif Pro', serif;
-}
-* {
-  box-sizing: border-box;
+  from {color: #9bdc28;}
+  to {color: #9bdc28;}
 }
 
 #dataform{
@@ -232,7 +240,7 @@ input[type=text]:focus {
 
 /* Set a style for all buttons */
 button {
-  background-color: #4CAF50;
+  background-color: #9bdc28;
   color: white;
   padding: 14px 20px;
   margin: 8px 0;
@@ -268,7 +276,7 @@ button:hover {
 #paragraphJoin {
 font-size: 20px;
 padding: 20px;
-background-color: #4CAF50;
+background-color: #9bdc28;
 margin-bottom: 20px;
 opacity:0.8 ;
 }

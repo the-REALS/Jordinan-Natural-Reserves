@@ -1,44 +1,34 @@
-'use strict'
+'use strict';
 
-var guestForm = document.getElementById("dataform")
-guestForm.addEventListener("submit", function(event){
-    event.preventDefault();
-    var guestLik =event.target.gLik.value;
-    var guestSug = event.target.gSug.value;
-    var guestRef = event.target.gRef.value;
-    var guestRat = event.target.gRating.value;
-})
-var donationform = document.getElementById("donationform")
-guestForm.addEventListener("submit", function(event){
-    event.preventDefault();
-    var donorNam = event.target.doname.value;
-    var donorMon = event.target.money.value;
-})
+var guestForm = document.getElementById("dataform");
+guestForm.addEventListener("submit", checkFeedback);
 
-function checkFeedback(){
-    var b1 = document.forms["feed"]["1"].value;
-    var b2 = document.forms["feed"]["2"].value;
-    if (b1 != "" ){
-        alert (b1+ " " +b2);
-    } 
+function checkFeedback() {
+    event.preventDefault();
+    var firstq = document.forms["feed"]["firstQ"].value;
+    var secondQ = document.forms["feed"]["secondQ"].value;
+    if (firstq != "") {
+        alert(` thank you to submit `);
+    }
+    guestForm.reset();
 }
-function checkDon(){
-    var b3 = document.forms["don"]["3"].value;
-    var b4 = document.forms["don"]["4"].value;
-    
-    if (b3 != "" ){
-        alert (b3+ " " +b4);    
-         
-    } 
-}
+
+
+// var donationform = document.getElementById("donationform");
+// guestForm.addEventListener("submit", function (event) {
+//     event.preventDefault();
+//     var donorNam = event.target.doname.value;
+//     var donorMon = event.target.money.value;
+// })
+
 
 
 // This JS for Nav oki 
-var links=document.getElementById("icon");
-links.addEventListener('click',function(event){
+var links = document.getElementById("icon");
+links.addEventListener('click', function (event) {
     event.preventDefault();
-    
-    var displayOrHide=document.getElementById("myLinks")
+
+    var displayOrHide = document.getElementById("myLinks")
     if (displayOrHide.style.display === "inline-block") {
         displayOrHide.style.display = "none";
     } else {
@@ -46,3 +36,39 @@ links.addEventListener('click',function(event){
     }
 });
 // End nav JS
+
+
+
+// fot send botton on the contact form 
+var signup = document.querySelector('.modal-content');
+signup.addEventListener('submit', signUpBotton);
+
+function signUpBotton() {
+    event.preventDefault();
+    console.log(event.target[0].value);
+    if (event.target[0].value !== "" && event.target[1].value !== "" && event.target[2].value !== "" && event.target[3].value !== "") {
+
+        alert("thanks to contact us we will contact you");
+    }
+    else {
+        alert('please fill up the form');
+    }
+    signup.reset();
+}
+
+
+
+// to click out side the contact form and take you out of the page 
+function reachNow() {
+    // Get the modal
+    var modal = document.getElementById('id01');
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function (event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+}
+
+reachNow();
