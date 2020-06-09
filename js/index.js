@@ -20,6 +20,7 @@ slidesDots.addEventListener('click', function (event) {
     currentSlide(first);
   }
 });
+
 // to show 3 the slides 
 function showSlides(n) {
   var i;
