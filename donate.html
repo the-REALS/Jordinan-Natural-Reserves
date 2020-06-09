@@ -35,31 +35,38 @@
   </header>
 
 
-  <div>
-    <img src="https://i.pinimg.com/originals/63/d7/2a/63d72a4c56a567b1d718253538109e36.jpg" alt="">
+  <div id="image1">
+    <img src="img/donat.jpg" alt="error">
   </div>
-  <div>
 
-    <form name="don" id="donationform" action="/action_page.php" onsubmit="return checkDon()">
+
+  <div id="form1">
+    <form name="don" id="donationform">
       <fieldset>
-        <legend>Donation Data</legend>
-        <label for="dnama">Your Name</label>
+        <legend id="firstLefend">Donation Data</legend>
+        <label id="yourName" for="dnama">Your Name</label>
         <input required placeholder="Enter name..." name="3" type="text" id="doname">
         <br>
+
         <label for="organ">Donate as an organization</label>
         <input type="checkbox" id="organ">
         <br>
+
         <label for="money">How much would you like to give?</label>
         <input required placeholder="$$$" name="4" type="number" id="money">
         <br>
+
         <p>
           Thank you very much you are a good person
         </p>
+
         <input type="submit" id="subs">
 
       </fieldset>
     </form>
   </div>
+
+
 
   <!-- Footer  -->
   <footer class="footer-distributed">
@@ -121,7 +128,7 @@
   </footer>
   <!-- End Footer -->
 
-
+  <script src="js/app.js"></script>
   <script src="js/donate.js"></script>
 </body>
 
