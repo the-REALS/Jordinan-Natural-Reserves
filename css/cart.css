@@ -296,6 +296,8 @@ body {
   
 #items{
     margin-left: 15%;
+    /* text-align: center; */
+
 }
 .column-labels{
     margin-left: 15%;
@@ -315,6 +317,11 @@ body {
 .product-price {
     float: left;
     width: 12%;
+
+}
+.product-price22, .product-quantity22, .product-removal22, .product-line-price22{
+    padding-top: 90px;
+
 }
   
 .product-quantity {
@@ -349,9 +356,9 @@ h1 {
 label {
     color: #aaa;
 }
-  /* What are you doing here why ---------------------------------- whhhhhhhhy */
 .shopping-cart {
-    /* margin-top: -45px; */
+  min-height: 50vh;
+    margin-top: 45px;
 }
   
 .column-labels label {
@@ -372,7 +379,7 @@ label {
     text-align: center;
 }
 .product .product-image img {
-    width: 100px;
+    width: 150px;
 }
 .product .remove-product {
     border: 0;
@@ -386,16 +393,19 @@ label {
 .product .remove-product:hover {
     background-color: #a44;
 }
-  
+
+.totals{
+  position: absolute;
+  right: 5%;
+  width: 20%;
+  top: 89%;
+}  
 .totals .totals-item {
-    float: right;
-    clear: both;
     width: 100%;
     margin-bottom: 10px;
 }
 .totals .totals-item label {
-    float: left;
-    clear: both;
+    right: 150%;
     width: 79%;
     text-align: right;
 }
