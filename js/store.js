@@ -1,5 +1,7 @@
 'use strict'
 
+var count = 0;
+var spano = document.querySelector('#spano');
 var products = [];
 function Products(name, path, price, quantity){
 this.name = name;
@@ -19,6 +21,8 @@ var addToCart = document.querySelectorAll('.container');
 for(var i=0; i<addToCart.length; i++){
 addToCart[i].addEventListener('click',handelAddToCart);
 }
+getProduct();
+
 function handelAddToCart (event){
     getProduct();
     event.preventDefault();
@@ -38,7 +42,8 @@ function handelAddToCart (event){
     //creat p
     console.log(productQuantity);
     new Products(productName, productPath, productPrice, productQuantity);
-
+    count += 1;
+    spano.textContent = `_${count}_`;
     // console.log(products);
     setProduct();
 }
@@ -47,13 +52,20 @@ function handelAddToCart (event){
 function setProduct(){
     var item = JSON.stringify(products);
     localStorage.setItem('item', item);
+    var item2 = JSON.stringify(count);
+    localStorage.setItem('count', item2);
 }
 // get the item that stored in the local storage 
 function getProduct(){
   var getproduct = localStorage.getItem('item');
-  if(getproduct){
+    if(getproduct){
   products = JSON.parse(getproduct);
   }
+  var getCount = localStorage.getItem('count');
+    if(getCount){
+  count = JSON.parse(getCount);
+  spano.textContent = `_${count}_`;
+}
 }
 
 var filterButns = document.querySelector('#filter-btns').children;
@@ -76,27 +88,37 @@ filterButns[i].addEventListener('click', function(){
             main[k].style.display = 'block';
         }
     }
-    console.log();
+    // console.log();
 });
 
 }
 
 
+
 // Nav 
 // this for the nav link
 var links=document.getElementById("icon");
-links.addEventListener('click',function(event){
-    event.preventDefault();
-    
-    var displayOrHide=document.getElementById("myLinks")
-    if (displayOrHide.style.display === "inline-block") {
-        displayOrHide.style.display = "none";
-    } else {
-        displayOrHide.style.display = "inline-block";
-    }
+links.addEventListener('click', (event)=>{
+  event.preventDefault();
+  
+    var displayOrHide=document.getElementById("myLinks");
+    displayOrHide.classList.toggle('myLinks2');
 });
+// var links=document.getElementById("icon");
+// links.addEventListener('click',function(event){
+//     event.preventDefault();
+    
+//     var displayOrHide=document.getElementById("myLinks")
+//     if (displayOrHide.style.display === "inline-block") {
+//         displayOrHide.style.display = "none";
+//     } else {
+//         displayOrHide.style.display = "inline-block";
+//     }
+// });
 // end nav link
+
 // for make nav fixed and give him opecity 0.5 after scroll
+
 var nav = document.querySelector('.topnav');
 window.onscroll = function () { scrollFunction() };
 

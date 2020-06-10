@@ -15,7 +15,7 @@ function currentSlide(n) {
 var slidesDots = document.querySelector('#slidesDots');
 slidesDots.addEventListener('click', function (event) {
   if (event.target.attributes[1].textContent == 'dot') {
-    console.log(event.target.attributes[1].textContent);
+    // console.log(event.target.attributes[1].textContent);
     var first = event.target.id;
     currentSlide(first);
   }
@@ -114,14 +114,15 @@ function readmeButton() {
 // this for the nav link
 var links=document.getElementById("icon");
 links.addEventListener('click',function(event){
-    event.preventDefault();
-    
-    var displayOrHide=document.getElementById("myLinks")
-    if (displayOrHide.style.display === "inline-block") {
-        displayOrHide.style.display = "none";
-    } else {
-        displayOrHide.style.display = "inline-block";
-    }
+  event.preventDefault();
+  
+    var displayOrHide=document.getElementById("myLinks");
+    displayOrHide.classList.toggle('myLinks2');
+    // if (displayOrHide.style.display === "inline-block") {
+    //     displayOrHide.style.display = "none";
+    // } else {
+    //     displayOrHide.style.display = "inline-block";
+    // }
 });
 // end nav link
 // for make nav fixed and give him opecity 0.5 after scroll
@@ -131,7 +132,7 @@ window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     nav.classList = "sticky";
-    console.log('hiii')
+    // console.log('hiii')
   } else {
     nav.classList = "topnav";
   }
@@ -145,6 +146,38 @@ function scrollFunction() {
 
 
 /**************************************************************/
+var count = 0;
+var spano = document.querySelector('#spano');
+var tripAll = [];
+
+function Trip(name, path, price, quantity) {
+this.name = name;
+this.path = path;
+this.price = price;
+this.quantity = quantity;
+this.total = this.quantity * this.price;
+tripAll.push(this);
+}
+
+getProduct();
+
+function setProduct(){
+  var item = JSON.stringify(tripAll);
+  localStorage.setItem('item', item);
+  var item2 = JSON.stringify(count);
+  localStorage.setItem('count', item2);
+}
+// get the item that stored in the local storage 
+function getProduct(){
+var getproduct = localStorage.getItem('item');
+if(getproduct){
+  tripAll = JSON.parse(getproduct);
+}
+var getCount = localStorage.getItem('count');
+if(getCount){
+  count = JSON.parse(getCount);
+}
+}
 
 var pur = document.querySelector(".purchase");
 var slid = document.querySelector('.slider');
@@ -166,18 +199,27 @@ ticket.addEventListener('click', (event)=>{
         form.classList.remove('form2');
     }
 });
+
+var tripName, tripPrice, tripPath;
+
 // var eTar = `event.target`;
 forma.addEventListener('submit', (event) =>{
     event.preventDefault();
-    console.log(event.target.id)
+    // console.log(event.target.id)
     // if(event.target.textContent == ' NEXT '){
-      console.log(event);
+      // console.log(event);
         if(event.target[0].value !== '' && event.target[1].value !== '' && event.target[2].value !== '' && event.target[3].value !== ''){
             form.classList.add('form2');
             prog3.classList.add('active');
             ticket.classList.add('table2');
             passen.textContent = event.target[0].value;
-            morf.textContent = event.target[3].value
+            morf.textContent = event.target[3].value;
+            // console.log(event.target[2].value);
+            new Trip(tripName, tripPath, tripPrice, event.target[2].value);
+            count += 1;
+            spano.textContent = ` ${count} `;
+            setProduct();
+            // console.log(event);
         }
     // }
 });
@@ -193,7 +235,11 @@ slid.addEventListener('click', (event) =>{
     if(event.target.textContent == 'Purchase'){
         slid.classList.add('slider2');
         sec2.classList.add('screen2');
-        console.log(event.target.textContent);
+        console.log(event.path[3].children[0].children[0].children[0].attributes[0].nodeValue);
+        tripPath = event.path[3].children[0].children[0].children[0].attributes[0].nodeValue;
+        tripName = event.path[3].children[0].children[0].children[1].innerHTML;
+        tripPrice = event.path[3].children[0].children[0].children[0].attributes[1].nodeValue;
+        // console.log(event.target.textContent);
     }
 });
 
