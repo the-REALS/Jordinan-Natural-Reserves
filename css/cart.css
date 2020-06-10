@@ -61,7 +61,7 @@ body {
   transition: 1.5s;
 }
 .topnav .myLinks2{
-  right: 11%;
+  right: 12%;
 }
 
 .topnav a {
@@ -87,8 +87,8 @@ body {
     width: 100%;
     z-index: 99999999;
     top: 0px;
-    height: 50px;
-}
+    height: 64px;
+  }
 .sticky .myLinks{
     float: right;
     position: absolute;
@@ -128,7 +128,7 @@ body {
     font-size: 20px;
     position: absolute;
     top: 17px;
-    font-family: 'Piedra', cursive;
+    font-family: 'Piedra', cursive !important;
   }
   #logoname{
     color: white;
@@ -136,7 +136,7 @@ body {
     font-size: 20px;
     position: absolute;
     top: 17px;
-    font-family: 'Piedra', cursive;
+    font-family: 'Piedra', cursive !important;
   }
   #logoname .s1{
     color: #9bdc28;
