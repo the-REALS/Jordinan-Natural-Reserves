@@ -106,7 +106,7 @@ body{
     background-size: cover;
     width: 100%;
     height: 500px;
-    background-image: url(../img/background3.jpg);
+    background-image: url(../img/Deer\ Land.jpg);
   }
   
   
@@ -213,7 +213,7 @@ background-color: #9bdc28;
    
   .footer-distributed h3{
     color:  #ffffff;
-    font: normal 36px 'Cookie', cursive;
+    font: normal 36px 'Cookie', cursive !important ;
     margin: 0;
   }
    
