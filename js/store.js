@@ -39,6 +39,9 @@ function handelAddToCart (event){
     console.log(productPrice);
     //Reach the quantity
     var productQuantity = event.path[1].children[1].value;
+    if(productQuantity == 0){
+      productQuantity =1;
+    }
     //creat p
     console.log(productQuantity);
     new Products(productName, productPath, productPrice, productQuantity);
