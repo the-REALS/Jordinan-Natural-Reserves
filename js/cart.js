@@ -124,7 +124,26 @@ function removeItemFromCart(event) {
       displayOrHide.classList.toggle('myLinks2');
   });
 
-
+    var modal = document.getElementById('myModal');
+    var span = document.getElementById("close1");
+    var popupMessege = document.getElementById('popup');
+    popupMessege.addEventListener('click' ,function mesegeCheckout(){
+     if(event.target.id === 'popup'){
+      modal.style.display = "block"; 
+    }
+   });
+   myModal.addEventListener('click' ,function closeMessege(){
+    if(event.target === myModal){
+     modal.style.display = "none"; 
+   }
+   location.replace('store.html');
+  });
+  span.addEventListener('click' ,function closeMessege(){
+    if(event.target === span){
+     modal.style.display = "none"; 
+    }
+    location.replace('store.html');
+  });
 renderCart();
 countAll ();
 
