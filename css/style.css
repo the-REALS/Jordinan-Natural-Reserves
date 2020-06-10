@@ -810,18 +810,14 @@ html{
     transition-delay: 0.75s;
 }
 /****************** brogers bar ***********************/
-/* contain me: screen size*/
-/* #sec2{
-  position: relative;
-} */
+
 .screen {
-    /* width: 80vw;   80% of screen width */
+    width: 80vw;   /*80% of screen width*/
     text-align: center;
     margin: auto;
     position: absolute;
     left: 500vh;
     transition: 2s;
-    /* overflow: hidden; */
     overflow-y: hidden;
 }
 .screen2{
@@ -888,10 +884,6 @@ html{
   
   .progressbar li.active{
     background-color: dogerblue;
-    /* width: 15px; */
-    /* overflow-wrap: unset; */
-    /* height: 50px; */
-    /* overflow: hidden; */
   }
   
   .progressbar li.active:before {
