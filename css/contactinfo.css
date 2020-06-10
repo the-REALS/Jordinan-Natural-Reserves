@@ -67,7 +67,7 @@ top: 1.7%;
 transition: 1.5s;
 }
 .topnav .myLinks2{
-right: 11%;
+right: 12%;
 }
 
 .topnav a {
@@ -93,7 +93,7 @@ font-size: 17px;
   width: 100%;
   z-index: 99999999;
   top: 0px;
-  height: 50px;
+  height: 64px;
 }
 .sticky .myLinks{
   float: right;
@@ -134,7 +134,7 @@ font-size: 17px;
   font-size: 20px;
   position: absolute;
   top: 17px;
-  font-family: 'Piedra', cursive;
+  font-family: 'Piedra', cursive !important;
 }
 #logoname{
   color: white;
@@ -142,7 +142,7 @@ font-size: 17px;
   font-size: 20px;
   position: absolute;
   top: 17px;
-  font-family: 'Piedra', cursive;
+  font-family: 'Piedra', cursive !important;
 }
 #logoname .s1{
   color: #9bdc28;
@@ -162,12 +162,8 @@ font-size: 17px;
   background-size: cover;
   width: 100%;
   height: 500px;
-<<<<<<< HEAD
-  background-image: url(../img/background3.jpg);
-=======
   margin-bottom: 60px;
   background-image: url(../img/background2.jpg);
->>>>>>> master
 }
 
 /* end */
