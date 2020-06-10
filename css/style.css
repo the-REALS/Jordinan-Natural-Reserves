@@ -26,7 +26,7 @@
   width: 100%;
   z-index: 99999999;
   top: 0px;
-  height: 60px;
+  height: 64px;
 }
 
 .sticky .myLinks{
@@ -37,11 +37,13 @@
   transition: 1.5s;
 }
 .sticky .myLinks2{
-  right: 10%;
+  right: 12%;
 }
 
 .sticky a {
   color: #fff;
+
+  
   padding: 25.5px 16px;
   text-decoration: none;
   font-size: 17px;
@@ -97,7 +99,7 @@
 }
 .topnav .myLinks2{
   display: '';
-  right: 10%;
+  right: 11%;
 }
 
 .topnav a {
