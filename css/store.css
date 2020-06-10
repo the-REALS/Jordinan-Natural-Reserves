@@ -323,7 +323,7 @@
     font-size: 20px;
     position: absolute;
     top: 17px;
-    font-family: 'Piedra', cursive;
+    font-family: 'Piedra', cursive !important;
   
   }
   #logoname{
@@ -332,7 +332,7 @@
     font-size: 20px;
     position: absolute;
     top: 17px;
-    font-family: 'Piedra', cursive;
+    font-family: 'Piedra', cursive !important;
   }
   #logoname span{
     color: #9bdc28;
@@ -347,6 +347,7 @@
   }
   
 #background {
+  box-shadow: 6px 2px 10px 5px rgba(0, 0, 0, 0.12);
   background-position-y: center;
   background-size: cover;
   width: 100%;

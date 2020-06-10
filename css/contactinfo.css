@@ -75,7 +75,7 @@ body {
   font-size: 20px;
   position: absolute;
   top: 17px;
-  font-family: 'Piedra', cursive;
+  font-family: 'Piedra', cursive !important;
 
 }
 #logoname{
@@ -84,7 +84,7 @@ body {
   font-size: 20px;
   position: absolute;
   top: 17px;
-  font-family: 'Piedra', cursive;
+  font-family: 'Piedra', cursive !important;
 }
 #logoname span{
   color: #9bdc28;
@@ -98,10 +98,12 @@ body {
   margin: 5px 5px 0px 25px;
 }
 #background {
+  box-shadow: 6px 2px 10px 5px rgba(0, 0, 0, 0.12);
   background-position-y: center;
   background-size: cover;
   width: 100%;
   height: 500px;
+  margin-bottom: 60px;
   background-image: url(../img/background3.jpg);
 }
 
@@ -143,17 +145,31 @@ body {
 /* end */
 
 #wrapper{
-  padding-left: 25px;
+  width: 80%;
+  margin: auto auto;
 }
 
 #contactUs{
-  padding: 70px 0px 5px 0px;
+  color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: #9bdc28;
+  padding: 20px;
+  width: 20%;
+  margin: auto auto;
+  /* padding: 70px 0px 5px 0px; */
   text-align: center;
   font-size: 30px;
 }
+#centered{
+  text-align: center;
+  margin-top: 30px;
 
+}
 #reachBotton {
-margin: 30px 0 30px 600px;
+  background-color: #9bdc28;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 50%;
+/* margin: 30px 0 30px 600px; */
 }
 
 #subs{
@@ -211,7 +227,7 @@ margin: 30px 0 30px 600px;
 
 #dataform{
   margin: auto auto;
-  background-image: linear-gradient(170deg,#FCF6F5FF 20%, #FCF6F5FF 20% 75%,#9bdc28 50% 80%,#9bdc28 80%);
+  background-image: linear-gradient(170deg,#FFF 20%, #FFF 20% 75%,#9bdc28 50% 80%,#9bdc28 80%);
 
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   padding: 20px;
@@ -222,26 +238,54 @@ margin: 30px 0 30px 600px;
   padding-bottom: 20px;
   padding-left: 150px;
 }
+#elephantImg img{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
 #elephantImg {
-  margin: 20px auto 0 250px;
+  margin: 30px;
+  text-align: center;
+  
+}
+#helpanimal{
+  
+  display: inline-block;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 30%;
+  margin-right: 25px;
+  margin-top: 50px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+#cardsanimal{
+  margin-bottom: 50px;
 }
 
 .headerh{
-  padding: 40px;
-  font-size: 20px;
+  color: white;
+  /* width: 30%; */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: chocolate;
+  padding: 20px;
+  margin: auto auto;
   text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+  
 }
 #form{
   margin: auto auto;
+  margin-top: 25px;
 }
 .paragraphAnimals {
-  line-height: 25px;
-  padding-left: 20px;
-  height: 70%;
-  background-color: rgb(150, 146,144,0.4);
-  margin-bottom: 20px;
-  text-align: center;
-}
+
+  font-family: -webkit-body;
+  line-height: 30px;
+  margin-bottom: 40px;
+  text-align: justify;
+  font-style: italic;
+  padding: 20px;
+  }
 
 /* Full-width input fields */
 input[type=text] {
@@ -260,16 +304,24 @@ input[type=text]:focus {
   background-color: #ddd;
   outline: none;
 }
+#alinc{
+text-align: center;  
+}
 
 /* Set a style for all buttons */
+button a{
+  text-decoration: none;
+  color: white;
+}
 button {
   background-color: #9bdc28;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 50%;
   color: white;
+  margin: auto auto;
   padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   cursor: pointer;
-  width: 100%;
   opacity: 0.9;
 }
 
