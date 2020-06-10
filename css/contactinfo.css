@@ -156,27 +156,54 @@ body {
   padding: 20px;
   width: 20%;
   margin: auto auto;
-  /* padding: 70px 0px 5px 0px; */
   text-align: center;
   font-size: 30px;
 }
 #centered{
+  font-size: 20px;
+  margin: auto auto;
+  margin-top: 80px;
+  margin-bottom: 50px;
+  width: 60%;
   text-align: center;
-  margin-top: 30px;
-
 }
-#reachBotton {
-  background-color: #9bdc28;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  width: 50%;
-/* margin: 30px 0 30px 600px; */
+#getIntouch {
+  border-radius: 5px;
+  padding: 15px 12px;
+  display: inline-block;
+  background-color: chocolate;
+  width: 40%;
+  color: white;
+}
+#getIntouch:hover {
+  background-color:chocolate;
+
 }
 
 #subs{
-  margin-left: 150px;
-  background-color:#9bdc28;
-  width: 70px;
-  height: 30px;
+    border-radius: 5px;
+    padding: 6px 9px;
+    display: inline-block;
+    background-color: chocolate;
+    width: 80px;
+    color: white;
+    
+}
+#subs:hover {
+  background-color:chocolate;
+}
+
+#alinc{
+  border-radius: 5px;
+  padding: 15px 12px;
+    margin-left: 10px;
+  background-color: chocolate;
+  width: 40%;
+  color:white; 
+}
+#alinc:hover{
+  background-color:chocolate;
+
 }
 
 .active {
@@ -234,10 +261,7 @@ body {
   width: 70%;
 }
 
-#guestHeaderTag {
-  padding-bottom: 20px;
-  padding-left: 150px;
-}
+
 #elephantImg img{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
@@ -263,9 +287,8 @@ body {
 
 .headerh{
   color: white;
-  /* width: 30%; */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: chocolate;
+  background-color: #9bdc28;
   padding: 20px;
   margin: auto auto;
   text-align: center;
@@ -304,9 +327,7 @@ input[type=text]:focus {
   background-color: #ddd;
   outline: none;
 }
-#alinc{
-text-align: center;  
-}
+
 
 /* Set a style for all buttons */
 button a{
