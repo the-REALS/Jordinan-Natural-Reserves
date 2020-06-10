@@ -13,44 +13,6 @@ function checkFeedback() {
     guestForm.reset();
 }
 
-
-// var donationform = document.getElementById("donationform");
-// guestForm.addEventListener("submit", function (event) {
-//     event.preventDefault();
-//     var donorNam = event.target.doname.value;
-//     var donorMon = event.target.money.value;
-// })
-
-
-
-// This JS for Nav oki 
-var links = document.getElementById("icon");
-links.addEventListener('click', function (event) {
-    event.preventDefault();
-
-    var displayOrHide = document.getElementById("myLinks")
-    if (displayOrHide.style.display === "inline-block") {
-        displayOrHide.style.display = "none";
-    } else {
-        displayOrHide.style.display = "inline-block";
-    }
-});
-
-var nav = document.querySelector('.topnav');
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
-    nav.classList = "sticky";
-    // console.log('hiii')
-  } else {
-    nav.classList = "topnav";
-  }
-}
-// End nav JS
-
-
-
 // fot send botton on the contact form 
 var signup = document.querySelector('.modal-content');
 signup.addEventListener('submit', signUpBotton);
@@ -84,3 +46,22 @@ function reachNow() {
 }
 
 reachNow();
+
+var nav = document.querySelector('.topnav');
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    nav.classList = "sticky";
+    // console.log('hiii')
+  } else {
+    nav.classList = "topnav";
+  }
+};
+var linkss=document.getElementById("icon");
+linkss.addEventListener('click', (event)=>{
+  event.preventDefault();
+  
+    var displayOrHide = document.getElementById("myLinks");
+    displayOrHide.classList.toggle('myLinks2');
+});

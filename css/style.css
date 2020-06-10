@@ -21,20 +21,18 @@
 .sticky{
   position: fixed;
   background-color: rgba(0, 0,0, 0.2);
-  /* padding-bottom: 10px; */
   transition: 1.5s;
   overflow: hidden;
   width: 100%;
   z-index: 99999999;
   top: 0px;
-  height: 50px;
+  height: 60px;
 }
 
 .sticky .myLinks{
- 
   float: right;
   position: absolute;
-  right: -34%;
+  right: -36%;
   top: 25%;
   transition: 1.5s;
 }
@@ -93,7 +91,7 @@
 .topnav .myLinks{
   float: right;
   position: absolute;
-  right: -34%;
+  right: -36%;
   top: 2.5%;
   transition: 1.5s;
 }
@@ -107,7 +105,7 @@
   padding: 25.5px 16px;
   text-decoration: none;
   font-size: 17px;
-  
+  line-height: 0.6; 
 }
 
 .topnav a#icon {
@@ -142,9 +140,12 @@
   top: 17px;
   font-family: 'Piedra', cursive !important;
 }
-#logoname span{
+#logoname .s1{
   color: #9bdc28;
-  
+}
+
+#logoname .s2{
+  color: #cd6133;
 }
 
 #logo{
@@ -425,7 +426,6 @@ footer{
   to {opacity: 1}
 }
 #vedio-hed{
-  
   padding: 20px;
   text-align: center;
   background-color: #9bdc28;
@@ -557,7 +557,7 @@ html{
     margin: auto;
     overflow-x: scroll;
     overflow-y: hidden;
-    background-color: beige;
+    background-color: #fff;
     right: 0vh;
     transition: 2.5s;
     /* right: 220vh; */
@@ -582,7 +582,7 @@ html{
   }
   
   .slider .item {
-    margin-right: 80px;
+    /* margin-right: 80px; */
     height: 50vh;
     z-index: 9999;
   }
@@ -680,14 +680,12 @@ html{
     font-size: 40px;
     top: -11px;
     text-align: center;
-    color: black;
+    color: #fff;
     font-weight: 900;
     text-align: center;
-    left: 3px;
+    left: 70px;
 }
-.imgBx3 h2{
-  left: 70px;
-}
+
 .container .card .imgBx{
     position: absolute;
     top: 50%;
@@ -710,6 +708,7 @@ html{
 .container .card .imgBx2 img{
   /* position: absolute; */
   width: 350px;
+  height: 240px;
   right: 0;
   top: 0;
 }

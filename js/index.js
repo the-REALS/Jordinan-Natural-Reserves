@@ -205,7 +205,7 @@ var tripName, tripPrice, tripPath;
 // var eTar = `event.target`;
 forma.addEventListener('submit', (event) =>{
     event.preventDefault();
-
+console.log(event.target[0].labels);
         if(event.target[0].value !== '' && event.target[1].value !== '' && event.target[2].value !== '' && event.target[3].value !== ''){
             form.classList.add('form2');
             prog3.classList.add('active');
@@ -217,6 +217,12 @@ forma.addEventListener('submit', (event) =>{
             spano.textContent = `_${count}_`;
             setProduct();
         }
+        // for(var i = 0; i < 4; i++){
+        //   if(event.target[i].value !== ''){
+            
+        //   }
+
+        // }
 });
 
 bak.addEventListener('click', ()=>{
