@@ -106,7 +106,7 @@ body{
     background-size: cover;
     width: 100%;
     height: 500px;
-    background-image: url(../img/background3.jpg);
+    background-image: url(../img/Deer\ Land.jpg);
   }
   
   
@@ -140,11 +140,12 @@ body{
   margin: 25px 0 10px 0;
 }
 #subs {
-  border-radius: 30px;
-  width:90px;
-  height: 30px;
-  display: inline-block;
-background-color: #9bdc28;
+border-radius: 5px;
+padding: 6px 9px;
+display: inline-block;
+background-color: chocolate;
+width: 80px;
+color: white;
 }
 
 /* end  */
@@ -213,7 +214,7 @@ background-color: #9bdc28;
    
   .footer-distributed h3{
     color:  #ffffff;
-    font: normal 36px 'Cookie', cursive;
+    font: normal 36px 'Cookie', cursive !important ;
     margin: 0;
   }
    

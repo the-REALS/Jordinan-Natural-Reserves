@@ -193,7 +193,7 @@ footer{
  
 .footer-distributed h3{
 	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
+	font: normal 36px 'Cookie', cursive !important ;
 	margin: 0;
 }
  
@@ -437,12 +437,13 @@ footer{
     width: 67%;
     height: 50%;
     box-shadow: 6px 2px 10px 5px rgba(0, 0, 0, 0.12);
-    border: 0.3px solid black;
 
 
 }
 
-#vediopara{margin-top: 10px;
+#vediopara{
+  font-size: 23px;
+  margin-top: 10px;
   margin-top: 10px;
   padding: 10px;
   width: 30%;
