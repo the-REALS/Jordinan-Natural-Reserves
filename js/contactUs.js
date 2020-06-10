@@ -35,6 +35,18 @@ links.addEventListener('click', function (event) {
         displayOrHide.style.display = "inline-block";
     }
 });
+
+var nav = document.querySelector('.topnav');
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    nav.classList = "sticky";
+    // console.log('hiii')
+  } else {
+    nav.classList = "topnav";
+  }
+}
 // End nav JS
 
 
