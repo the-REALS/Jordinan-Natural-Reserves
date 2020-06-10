@@ -665,9 +665,12 @@ html{
     top: -11px;
     text-align: center;
     color: black;
+    font-weight: 900;
+    text-align: center;
+    left: 3px;
 }
-.imgBx2 img{
-
+.imgBx3 h2{
+  left: 70px;
 }
 .container .card .imgBx{
     position: absolute;
@@ -724,7 +727,7 @@ html{
     transition: 0.5s;
     opacity: 0;
     visibility: hidden;
-    margin-top: 80px;
+    margin-top: 100px;
 }
 .container .card:hover .contentBx .size{
     opacity: 1;
