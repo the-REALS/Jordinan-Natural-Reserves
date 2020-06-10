@@ -205,23 +205,24 @@ var tripName, tripPrice, tripPath;
 // var eTar = `event.target`;
 forma.addEventListener('submit', (event) =>{
     event.preventDefault();
-    // console.log(event.target.id)
-    // if(event.target.textContent == ' NEXT '){
-      // console.log(event);
+console.log(event.target[0].labels);
         if(event.target[0].value !== '' && event.target[1].value !== '' && event.target[2].value !== '' && event.target[3].value !== ''){
             form.classList.add('form2');
             prog3.classList.add('active');
             ticket.classList.add('table2');
             passen.textContent = event.target[0].value;
             morf.textContent = event.target[3].value;
-            // console.log(event.target[2].value);
             new Trip(tripName, tripPath, tripPrice, event.target[2].value);
             count += 1;
-            spano.textContent = ` ${count} `;
+            spano.textContent = `_${count}_`;
             setProduct();
-            // console.log(event);
         }
-    // }
+        // for(var i = 0; i < 4; i++){
+        //   if(event.target[i].value !== ''){
+            
+        //   }
+
+        // }
 });
 
 bak.addEventListener('click', ()=>{
@@ -239,8 +240,18 @@ slid.addEventListener('click', (event) =>{
         tripPath = event.path[3].children[0].children[0].children[0].attributes[0].nodeValue;
         tripName = event.path[3].children[0].children[0].children[1].innerHTML;
         tripPrice = event.path[3].children[0].children[0].children[0].attributes[1].nodeValue;
-        // console.log(event.target.textContent);
     }
+    if(event.target.textContent == 'Add To Cart'){
+    var productPath = event.path[2].children[0].children[0].attributes[0].nodeValue;
+    var productName = event.path[2].children[0].children[1].textContent;
+    var productPrice = event.path[2].children[0].children[0].attributes[1].nodeValue; 
+    var productQuantity = event.path[1].children[1].value;
+
+    new Trip(productName, productPath, productPrice, productQuantity);
+    count += 1;
+    spano.textContent = `_${count}_`;
+    setProduct();
+}
 });
 
 productScroll();

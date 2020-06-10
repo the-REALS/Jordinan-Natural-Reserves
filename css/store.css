@@ -7,7 +7,9 @@
     padding: 0;
     font-family: 'Source Serif Pro', serif;
   }
-
+html{
+  overflow-x: hidden;
+}
 
 #headerStore{
   text-align: center;
@@ -354,11 +356,13 @@
     top: 17px;
     font-family: 'Piedra', cursive !important;
   }
-  #logoname span{
+  #logoname .s1{
     color: #9bdc28;
-    
   }
   
+  #logoname .s2{
+    color: #cd6133;
+  }
   
   #logo{
     border-radius: 50px;

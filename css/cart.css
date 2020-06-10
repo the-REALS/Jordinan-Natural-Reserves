@@ -4,6 +4,10 @@ body {
     font-family: 'Source Serif Pro', serif;
   }
 
+  html{
+    overflow-x: hidden;
+  }
+  
 /* HEAD Style*/
 
   .mobile-container {
@@ -134,9 +138,12 @@ body {
     top: 17px;
     font-family: 'Piedra', cursive;
   }
-  #logoname span{
+  #logoname .s1{
     color: #9bdc28;
-    
+  }
+  
+  #logoname .s2{
+    color: #cd6133;
   }
   #logo{
     border-radius: 50px;
