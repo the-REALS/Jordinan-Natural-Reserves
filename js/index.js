@@ -15,11 +15,12 @@ function currentSlide(n) {
 var slidesDots = document.querySelector('#slidesDots');
 slidesDots.addEventListener('click', function (event) {
   if (event.target.attributes[1].textContent == 'dot') {
-    console.log(event.target.attributes[1].textContent);
+    // console.log(event.target.attributes[1].textContent);
     var first = event.target.id;
     currentSlide(first);
   }
 });
+
 // to show 3 the slides 
 function showSlides(n) {
   var i;
@@ -113,14 +114,15 @@ function readmeButton() {
 // this for the nav link
 var links=document.getElementById("icon");
 links.addEventListener('click',function(event){
-    event.preventDefault();
-    
-    var displayOrHide=document.getElementById("myLinks")
-    if (displayOrHide.style.display === "inline-block") {
-        displayOrHide.style.display = "none";
-    } else {
-        displayOrHide.style.display = "inline-block";
-    }
+  event.preventDefault();
+  
+    var displayOrHide=document.getElementById("myLinks");
+    displayOrHide.classList.toggle('myLinks2');
+    // if (displayOrHide.style.display === "inline-block") {
+    //     displayOrHide.style.display = "none";
+    // } else {
+    //     displayOrHide.style.display = "inline-block";
+    // }
 });
 // end nav link
 // for make nav fixed and give him opecity 0.5 after scroll
@@ -130,7 +132,7 @@ window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
   if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
     nav.classList = "sticky";
-    console.log('hiii')
+    // console.log('hiii')
   } else {
     nav.classList = "topnav";
   }
@@ -141,3 +143,165 @@ function scrollFunction() {
   //           men.classList.toggle('active');
   //           console.log('ssss');
   //       })
+
+
+/**************************************************************/
+var count = 0;
+var spano = document.querySelector('#spano');
+var tripAll = [];
+
+function Trip(name, path, price, quantity) {
+this.name = name;
+this.path = path;
+this.price = price;
+this.quantity = quantity;
+this.total = this.quantity * this.price;
+tripAll.push(this);
+}
+
+getProduct();
+
+function setProduct(){
+  var item = JSON.stringify(tripAll);
+  localStorage.setItem('item', item);
+  var item2 = JSON.stringify(count);
+  localStorage.setItem('count', item2);
+}
+// get the item that stored in the local storage 
+function getProduct(){
+var getproduct = localStorage.getItem('item');
+if(getproduct){
+  tripAll = JSON.parse(getproduct);
+}
+var getCount = localStorage.getItem('count');
+if(getCount){
+  count = JSON.parse(getCount);
+}
+}
+
+var pur = document.querySelector(".purchase");
+var slid = document.querySelector('.slider');
+var form = document.querySelector('#forma');
+var sec2 = document.querySelector('.screen');
+var prog3 = document.querySelector('#thP3');
+var ticket = document.querySelector('.table');
+var bak = document.querySelector('#back')
+var passen = document.querySelector('#passCont');
+var morf = document.querySelector('#passCont2');
+
+ticket.addEventListener('click', (event)=>{
+    event.preventDefault();
+    if(event.target.textContent == 'Back to Home'){
+        ticket.classList.remove('table2');
+        prog3.classList.remove('active');
+        sec2.classList.remove('screen2');
+        slid.classList.remove('slider2');
+        form.classList.remove('form2');
+    }
+});
+
+var tripName, tripPrice, tripPath;
+
+// var eTar = `event.target`;
+forma.addEventListener('submit', (event) =>{
+    event.preventDefault();
+    // console.log(event.target.id)
+    // if(event.target.textContent == ' NEXT '){
+      // console.log(event);
+        if(event.target[0].value !== '' && event.target[1].value !== '' && event.target[2].value !== '' && event.target[3].value !== ''){
+            form.classList.add('form2');
+            prog3.classList.add('active');
+            ticket.classList.add('table2');
+            passen.textContent = event.target[0].value;
+            morf.textContent = event.target[3].value;
+            // console.log(event.target[2].value);
+            new Trip(tripName, tripPath, tripPrice, event.target[2].value);
+            count += 1;
+            spano.textContent = ` ${count} `;
+            setProduct();
+            // console.log(event);
+        }
+    // }
+});
+
+bak.addEventListener('click', ()=>{
+    sec2.classList.remove('screen2');
+    slid.classList.remove('slider2');
+    ticket.classList.remove('table2');
+});
+
+slid.addEventListener('click', (event) =>{
+    event.preventDefault();
+    if(event.target.textContent == 'Purchase'){
+        slid.classList.add('slider2');
+        sec2.classList.add('screen2');
+        console.log(event.path[3].children[0].children[0].children[0].attributes[0].nodeValue);
+        tripPath = event.path[3].children[0].children[0].children[0].attributes[0].nodeValue;
+        tripName = event.path[3].children[0].children[0].children[1].innerHTML;
+        tripPrice = event.path[3].children[0].children[0].children[0].attributes[1].nodeValue;
+        // console.log(event.target.textContent);
+    }
+});
+
+productScroll();
+
+
+function productScroll() {
+    var slider = document.getElementById("slider");
+    var next = document.getElementsByClassName("pro-next");
+    var prev = document.getElementsByClassName("pro-prev");
+    var slide = document.getElementById("slide");
+    var item = document.getElementById("slide");
+
+  for (var i = 0; i < next.length; i++) {
+    //refer elements by class name
+
+    var position = 0; //slider postion
+
+    prev[i].addEventListener("click", function() {
+      //click previos button
+      if (position > 0) {
+        //avoid slide left beyond the first item
+        position -= 1;
+        translateX(position); //translate items
+      }
+    });
+
+    next[i].addEventListener("click", function() {
+      if (position >= 0 && position < hiddenItems()) {
+        //avoid slide right beyond the last item
+        position += 1;
+        translateX(position); //translate items
+      }
+    });
+  }
+
+  function hiddenItems() {
+    //get hidden items
+    var items = getCount(item, false);
+    var visibleItems = slider.offsetWidth / 7600;
+    return items - Math.ceil(visibleItems);
+  }
+}
+
+function translateX(position) {
+  //translate items
+  slide.style.left = position * -210 + "px";
+}
+
+function getCount(parent, getChildrensChildren) {
+  //count no of items
+  var relevantChildren = 0;
+  var children = parent.childNodes.length;
+  for (var i = 0; i < children; i++) {
+    if (parent.childNodes[i].nodeType != 3) {
+      if (getChildrensChildren)
+        relevantChildren += getCount(parent.childNodes[i], true);
+      relevantChildren++;
+    }
+  }
+  return relevantChildren;
+}
+
+
+

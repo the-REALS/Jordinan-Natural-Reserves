@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,129 +10,129 @@
     <script src="https://kit.fontawesome.com/4041ed350e.js" crossorigin="anonymous"></script>
     <title>Cart</title>
 </head>
+
 <body>
 
-    <header>
-         <!-- Nav with backgound  -->
-         <div id="background">
-          <div class="topnav">
-              <img src="img/logo.PNG" alt="logo" id="logo">
-              <h3 id="logoname">Jordan <span>Nature Reserve</span></h3>
+  <header>
+    <!-- Nav with backgound  -->
+    <div id="background">
+      <div class="topnav">
+        <img src="img/logo - Copy.PNG" alt="logo - Copy.PNG" id="logo">
+        <h3 id="logoname">Jordan <span>Nature Reserve</span></h3>
 
-              <div id="myLinks">
-                  <a href="index.html"><i class="fas fa-home"></i> HOME</a>
-                  <a href="store.html"><i class="fas fa-store"></i> STORE</a>
-                  <a href="contactinfo.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
-                  <a href="about-us.html"><i class="far fa-address-card"></i> ABOUT-US</a>
-                  <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART </a>
-              </div>
-             <!-- tog btn -->
-              <input type="submit" id="icon" value="" title="show the pages">
-          </div>
+        <div id="myLinks" class="myLinks">
+          <a href="cart.html"><i class="fas fa-shopping-cart"></i> CART <span id="spano"></span></a>
+          <a href="index.html"><i class="fas fa-home"></i> HOME</a>
+          <a href="store.html"><i class="fas fa-store"></i> STORE</a>
+          <a href="contactinfo.html"><i class="fas fa-id-card"></i> CONTACT-US</a>
+          <a href="about-us.html"><i class="far fa-address-card"></i> ABOUT-US</a>
+        </div>
+        <!-- tog btn -->
+        <input type="submit" id="icon" value="" title="show the Nav">
       </div>
-      <!-- End Nav -->
+    </div>
+    <!-- End Nav -->
   </header>
 
-<div class="shopping-cart">
+  <div class="shopping-cart">
 
-  <div class="totals">
-    <div class="totals-item">
-      <label>Subtotal</label>
-      <div class="totals-value" id="cart-subtotal"></div>
+    <div class="totals">
+      <div class="totals-item">
+        <label>Subtotal</label>
+        <div class="totals-value" id="cart-subtotal"></div>
+      </div>
+      <div class="totals-item">
+        <label>Tax (5%)</label>
+        <div class="totals-value" id="cart-tax"></div>
+      </div>
+      <div class="totals-item">
+        <label>Shipping</label>
+        <div class="totals-value" id="cart-shipping">15.00 $</div>
+      </div>
+      <div class="totals-item totals-item-total">
+        <label>Grand Total</label>
+        <div class="totals-value" id="cart-total"></div>
+      </div>
+      <button class="checkout">Checkout</button>
     </div>
-    <div class="totals-item">
-      <label>Tax (5%)</label>
-      <div class="totals-value" id="cart-tax"></div>
+
+
+    <div class="column-labels">
+      <div class="product-image1">Item</div>
+      <div class="product-Name1">Item Name</div>
+      <div class="product-price1">Price</div>
+      <div class="product-quantity1">Quantity</div>
+      <div class="product-line-price1">Total</div>
+      <div class="product-removal1">Remove</div>
     </div>
-    <div class="totals-item">
-      <label>Shipping</label>
-      <div class="totals-value" id="cart-shipping">15.00 $</div>
+
+    <div id="items">
+
     </div>
-    <div class="totals-item totals-item-total">
-      <label>Grand Total</label>
-      <div class="totals-value" id="cart-total"></div>
+  </div>
+
+
+  <footer class="footer-distributed">
+
+    <div class="footer-left">
+
+      <h3>The<span> REALS</span></h3>
+
+      <p class="footer-links">
+        <a href="index.html">HOME</a>
+        .
+        <a href="store.html">STORE</a>
+        .
+        <a href="contactinfo.html">CONTACT-US</a>
+        .
+        <a href="about-us.html">ABOUT-US</a>
+        .
+        <a href="cart.html">CART </a></p>
+      .
+
+      <p class="footer-company-name">THE REALS &copy; 2020</p>
     </div>
-    <button class="checkout">Checkout</button>
-  </div>
-  
 
-  <div class="column-labels">
-    <label class="product-image">Image</label>
-    <label class="product-price">Price</label>
-    <label class="product-quantity">Quantity</label>
-    <label class="product-removal">Remove</label>
-    <label class="product-line-price">Total</label>
-  </div>
+    <div class="footer-center">
 
-  <div id="items">
+      <div>
+        <i class="fa fa-map-marker"></i>
+        <p><span>Prince Muhammad Street</span> Amman, Jordan</p>
+      </div>
+      <div>
+        <i class="fa fa-phone"></i>
+        <p>+1 555 123456</p>
+      </div>
 
-  </div>
-  
+      <div>
+        <!-- <i class="fa fa-envelope"></i> -->
+        <p><a href="#">The-Reals@yahoo.com</a></p>
+      </div>
 
-      
+    </div>
 
-</div>
+    <div class="footer-right">
 
+      <p class="footer-company-about">
+        <span>About the company</span>
+        The Reals &amp; .
+        <!-- information about Us -->
+      </p>
 
-<footer class="footer-distributed">
- 
-  <div class="footer-left">
+      <div class="footer-icons">
 
-  <h3>The<span> REALS</span></h3>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
 
-  <p class="footer-links">
-    <a href="index.html">HOME</a>
-    .
-    <a href="store.html">STORE</a>
-    .
-    <a href="contactinfo.html">CONTACT-US</a>
-    .
-    <a href="about-us.html">ABOUT-US</a>
-    .
-    <a href="cart.html">CART </a></p>
-    .
+      </div>
 
-<p class="footer-company-name">THE REALS &copy; 2020</p>  </div>
-
-  <div class="footer-center">
-
-  <div>
-  <i class="fa fa-map-marker"></i>
-  <p><span>Prince Muhammad Street</span> Amman, Jordan</p>
-  </div>
-  <div>
-  <i class="fa fa-phone"></i>
-  <p>+1 555 123456</p>
-  </div>
-
-  <div>
-  <!-- <i class="fa fa-envelope"></i> -->
-  <p><a href="#">The-Reals@yahoo.com</a></p>
-  </div>
-
-  </div>
-
-  <div class="footer-right">
-
-  <p class="footer-company-about">
-  <span>About the company</span>
-  The Reals &amp; .
-  <!-- information about Us -->
-  </p>
-
-  <div class="footer-icons">
-
-  <a href="#"><i class="fa fa-facebook"></i></a>
-  <a href="#"><i class="fa fa-twitter"></i></a>
-  <a href="#"><i class="fab fa-instagram"></i></a>
-  
-  </div>
-
-  </div>
+    </div>
 
   </footer>
 
 
-    <script src="js/cart.js"></script>
+  <script src="js/cart.js"></script>
 </body>
+
 </html>

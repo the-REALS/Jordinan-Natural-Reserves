@@ -8,6 +8,7 @@
     font-family: 'Source Serif Pro', serif;
   }
 
+
 #headerStore{
   text-align: center;
   margin: auto auto;
@@ -219,29 +220,43 @@
 }
 
 /* for Js Nav*/
+
+#spano{
+  border-radius: 50%;
+  background-color: red;
+  text-align: center;
+  font-size: 25px;
+}
+
 .sticky{
-    position: fixed;
-    background-color: rgba(0, 0,0, 0.2);
-    /* padding-bottom: 10px; */
-    transition: 1.5s;
-    overflow: hidden;
-    width: 100%;
-    z-index: 1;
-    top: 0px;
-  }
-  .sticky #myLinks {
-    display: none;
-    float: right;
-    position: absolute;
-    right: 6%;
-    top: 30%;
-  }
-  .sticky a {
-    color: #292c2f;
-    padding: 25.5px 16px;
-    text-decoration: none;
-    font-size: 17px;
-  }
+  position: fixed;
+  background-color: rgba(0, 0,0, 0.2);
+  /* padding-bottom: 10px; */
+  transition: 1.5s;
+  overflow: hidden;
+  width: 100%;
+  z-index: 99999999;
+  top: 0px;
+  height: 50px;
+}
+
+.sticky .myLinks{
+  float: right;
+  position: absolute;
+  right: -35%;
+  top: 22%;
+  transition: 1.5s;
+}
+.sticky .myLinks2{
+  right: 12%;
+}
+
+.sticky a {
+  color: #fff;
+  padding: 25.5px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
   .sticky a#icon {
     float: right;
   }
@@ -260,13 +275,6 @@
     border-radius: 10px;
   }
   
-  .topnav {
-    overflow: hidden;
-    background-color:#292c2f;
-    position: fixed;
-    width: 100%;
-    z-index: 99999;
-  }
   #icon{
     border: 0px;
     border-radius: 5px;
@@ -282,25 +290,37 @@
     margin-right: 2%;
     margin-top: 7px;
     position: absolute;
-    right: 1%;
-    top: 8%;
-  }
-  .topnav #myLinks {
-    display: none;
-    float: right;
-    position: absolute;
-    right: 6%;
-    top: 30%;
+    right: 7%;
+    top: 0.5%;
   }
   
+.topnav {
+  overflow: hidden;
+  background-color:#292c2f;
+  /* position: fixed; */
+  width: 100%;
+  height: 64px;
+  z-index: 1;
+  top: -32%;
+}
+.topnav .myLinks{
+  float: right;
+  position: absolute;
+  right: -35%;
+  top: 1.7%;
+  transition: 1.5s;
+}
+.topnav .myLinks2{
+  right: 11%;
+}
+
+.topnav a {
+  color: white;
+  padding: 25.5px 16px;
+  text-decoration: none;
+  font-size: 17px;
   
-  .topnav a {
-    color: white;
-    padding: 25.5px 16px;
-    text-decoration: none;
-    font-size: 17px;
-    
-  }
+}
   
   .topnav a#icon {
     float: right;
