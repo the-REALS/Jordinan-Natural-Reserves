@@ -6,6 +6,7 @@ var taxTotal = document.querySelector('#cart-tax');
 var gTotoal = document.querySelector('#cart-total');
 var count = 0;
 var spano = document.querySelector('#spano');
+var nothing = document.querySelector('#noTh');
 
 var products = [];
 var contT = 0;
@@ -14,13 +15,13 @@ var contT = 0;
 function getProduct(){
     var getproduct = localStorage.getItem('item');
     if(getproduct){
-    products = JSON.parse(getproduct);
+    products = JSON.parse(getproduct); 
     console.log(products);
     }
     var getCount = localStorage.getItem('count');
     if(getCount){
   count = JSON.parse(getCount);
-  spano.textContent = `_${count}_`;
+  spano.textContent = `${count}`;
 }};
 function setProduct(){
   var item = JSON.stringify(products);
@@ -33,6 +34,9 @@ function setProduct(){
 
 function renderCart(){
     getProduct();
+    if(products.length){
+      nothing.style.display = "none";
+    }
     for(var i=0; i< products.length; i++){
         var div1 = document.createElement('div');
         div1.setAttribute('class', 'product');
@@ -44,7 +48,7 @@ function renderCart(){
         div1.appendChild(div2);
         var div0 = document.createElement('div');
         div0.setAttribute('class', 'product-Name');
-        if (products[i].name == 'Dana Mountains' || products[i].name == 'Al Patra' || products[i].name == 'AL Mujib'){
+        if (products[i].name == 'Petra' || products[i].name == 'Al Salt' || products[i].name == 'Ajlon' || products[i].name == 'AL Mujib' || products[i].name == 'Al Shomary' || products[i].name == 'Al Azraq'){
           div0.textContent = `${products[i].name} Ticket`;
         }else{
           div0.textContent = products[i].name;
@@ -84,7 +88,11 @@ function renderCart(){
 
 
 function clearTable() {
-        container.innerHTML = ``;
+  if(products.length){
+    container.innerHTML = ``;
+  }else{
+    container.innerHTML = `<div id="noTh" class="noThing"><p> You Had Nothing In Your Cart! :( <br><a href="store.html">Visit Our Store & Add Some :D</a></p></div>`;
+  }
 }
 
 container.addEventListener('click', removeItemFromCart);
@@ -95,8 +103,12 @@ function removeItemFromCart(event) {
     if (event.target.textContent === 'Remove') {
       deleteId = event.target.id;
       contT = 0;
-      count -= 1;
       products.splice(deleteId, 1);
+      if(count == 0){
+        count = 0;
+      }else{
+        count = count - 1;
+      }
       
       setProduct();
       clearTable();
@@ -109,7 +121,7 @@ function removeItemFromCart(event) {
   window.onscroll = function () { scrollFunction() };
   
   function scrollFunction() {
-    if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
       nav.classList = "sticky";
       // console.log('hiii')
     } else {
@@ -129,18 +141,25 @@ function removeItemFromCart(event) {
     var popupMessege = document.getElementById('popup');
     popupMessege.addEventListener('click' ,function mesegeCheckout(){
      if(event.target.id === 'popup'){
-      modal.style.display = "block"; 
+      // modal.style.display = "block";
+    modal.classList.add('modal2');
+    count = 0;
+    products = [];
+    setProduct();
+    clearTable();
     }
    });
    myModal.addEventListener('click' ,function closeMessege(){
     if(event.target === myModal){
-     modal.style.display = "none"; 
+    //  modal.style.display = "none";
+    modal.classList.remove('modal2');
    }
    location.replace('store.html');
   });
   span.addEventListener('click' ,function closeMessege(){
     if(event.target === span){
-     modal.style.display = "none"; 
+    //  modal.style.display = "none"; 
+    modal.classList.remove('modal2');
     }
     location.replace('store.html');
   });
