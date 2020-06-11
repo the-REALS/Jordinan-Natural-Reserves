@@ -130,7 +130,7 @@ var nav = document.querySelector('.topnav');
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+  if (document.body.scrollTop > 400 || document.documentElement.scrollTop > 400) {
     nav.classList = "sticky";
     // console.log('hiii')
   } else {
@@ -176,6 +176,7 @@ if(getproduct){
 var getCount = localStorage.getItem('count');
 if(getCount){
   count = JSON.parse(getCount);
+  spano.textContent = `${count}`;
 }
 }
 
@@ -197,10 +198,16 @@ ticket.addEventListener('click', (event)=>{
         sec2.classList.remove('screen2');
         slid.classList.remove('slider2');
         form.classList.remove('form2');
-    }
+        mC.classList.remove('modal-content2')
+        modal.classList.remove('modal2');
+      }
 });
 
 var tripName, tripPrice, tripPath;
+var modal = document.getElementById('myModal');
+var span = document.getElementById("close1");
+var popupMessege = document.getElementById('next');
+var mC = document.querySelector('#mContent');
 
 // var eTar = `event.target`;
 forma.addEventListener('submit', (event) =>{
@@ -213,17 +220,31 @@ console.log(event.target[0].labels);
             passen.textContent = event.target[0].value;
             morf.textContent = event.target[3].value;
             new Trip(tripName, tripPath, tripPrice, event.target[2].value);
+            bak.classList.add('back2');
             count += 1;
-            spano.textContent = `_${count}_`;
+            spano.textContent = `${count}`;
+            // modal.style.display = "block";
+            modal.classList.add('modal2');
+            mC.classList.add('modal-content2');
             setProduct();
         }
-        // for(var i = 0; i < 4; i++){
-        //   if(event.target[i].value !== ''){
-            
-        //   }
-
-        // }
 });
+
+myModal.addEventListener('click' ,function closeMessege(){
+  if(event.target === myModal){
+  //  modal.style.display = "none"; 
+  mC.classList.remove('modal-content2')
+  modal.classList.remove('modal2');
+ }
+});
+span.addEventListener('click' ,function closeMessege(){
+  if(event.target === span){
+  //  modal.style.display = "none";
+  mC.classList.remove('modal-content2')
+  modal.classList.remove('modal2');
+  }
+});
+
 
 bak.addEventListener('click', ()=>{
     sec2.classList.remove('screen2');
@@ -240,6 +261,7 @@ slid.addEventListener('click', (event) =>{
         tripPath = event.path[3].children[0].children[0].children[0].attributes[0].nodeValue;
         tripName = event.path[3].children[0].children[0].children[1].innerHTML;
         tripPrice = event.path[3].children[0].children[0].children[0].attributes[1].nodeValue;
+        bak.classList.remove('back2');
     }
     if(event.target.textContent == 'Add To Cart'){
     var productPath = event.path[2].children[0].children[0].attributes[0].nodeValue;
@@ -249,7 +271,7 @@ slid.addEventListener('click', (event) =>{
 
     new Trip(productName, productPath, productPrice, productQuantity);
     count += 1;
-    spano.textContent = `_${count}_`;
+    spano.textContent = `${count}`;
     setProduct();
 }
 });
@@ -314,5 +336,53 @@ function getCount(parent, getChildrensChildren) {
   return relevantChildren;
 }
 
+// var inpu = document.querySelector('#inp');
+// inpu.addEventListener('focus', ()=>{
+//   for(var i = 0; i<4; i++){
+  
+//   }
+// })
 
+// inpu.blur(function() {
+//   var x = this;
+//   if (x.val())
+//     x.addClass('used');
+//   else
+//     x.removeClass('used');
+// });
 
+// $(window, document, undefined).ready(function() {
+
+//   $('input').blur(function() {
+//     var $this = $(this);
+//     if ($this.val())
+//       $this.addClass('used');
+//     else
+//       $this.removeClass('used');
+//   });
+
+  // var $ripples = $('.ripples');
+
+  // $ripples.on('click.Ripples', function(e) {
+
+  //   var $this = $(this);
+  //   var $offset = $this.parent().offset();
+  //   var $circle = $this.find('.ripplesCircle');
+
+  //   var x = e.pageX - $offset.left;
+  //   var y = e.pageY - $offset.top;
+
+  //   $circle.css({
+  //     top: y + 'px',
+  //     left: x + 'px'
+  //   });
+
+  //   $this.addClass('is-active');
+
+  // });
+
+  // $ripples.on('animationend webkitAnimationEnd mozAnimationEnd oanimationend MSAnimationEnd', function(e) {
+  // 	$(this).removeClass('is-active');
+  // });
+
+// });

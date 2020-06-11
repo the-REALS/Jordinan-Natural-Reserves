@@ -20,6 +20,8 @@ html{
 }
 
 #spano{
+  display: inline-block;
+  width: 27px;
   border-radius: 50%;
   background-color: red;
   text-align: center;

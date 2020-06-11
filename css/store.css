@@ -224,8 +224,10 @@ html{
 /* for Js Nav*/
 
 #spano{
+  display: inline-block;
+  width: 27px;
   border-radius: 50%;
-  background-color: red;
+  background-color: chocolate;
   text-align: center;
   font-size: 25px;
 }
@@ -246,7 +248,7 @@ html{
   float: right;
   position: absolute;
   right: -35%;
-  top: 22%;
+  top: 30%;
   transition: 1.5s;
 }
 .sticky .myLinks2{
@@ -309,7 +311,7 @@ html{
   float: right;
   position: absolute;
   right: -35%;
-  top: 1.7%;
+  top: 2%;
   transition: 1.5s;
 }
 .topnav .myLinks2{
